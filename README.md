@@ -8,7 +8,7 @@ API Documentation
 
 ## Endpoints
 
-_Base URL_: `https://api-omar-oceanrisk.herokuapp.com/`
+_Base URL_: `https://hunting-app-for-hunters.herokuapp.com/`
 
 | Description                             | Method | Endpoint                            |
 | :-------------------------------------- | :----- | :---------------------------------- |
