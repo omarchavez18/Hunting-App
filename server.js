@@ -1,16 +1,15 @@
 const express = require("express");
 const huntingAnimalService = require("./../hunting/services/huntingAnimalService");
 const animals = require("./huntingAnimals");
-//const cors = require("cors");
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-const port = process.env.PORT || 3000;
 
 //CORS
-// app.use(cors({ origin: "*" }));
-// eslint-disable-next-line no-undef
-// const port = process.env.PORT || 3000;
+app.use(cors({ origin: "*" }));
+//eslint-disable-next-line no-undef
+const port = process.env.PORT || 3000;
 
 //endpoint prueba de bienvenida
 app.get("/", (req, res) => {
