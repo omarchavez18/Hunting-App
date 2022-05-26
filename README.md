@@ -38,6 +38,7 @@ _Base URL_: `https://hunting-app-for-hunters.herokuapp.com/`
 - github Actions
 - NodeJS
 - CORS
+- Postman
 
 ## Getting Started
 
