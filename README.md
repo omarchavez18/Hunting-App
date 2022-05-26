@@ -1,4 +1,5 @@
 # Hunting-App
+
 Hunting app about the season, zone, type, price, and animals stats, the app show you all the animals if you want a big or small game and many more things to come.
 
 BackEnd Documentation
@@ -9,19 +10,16 @@ API Documentation
 
 _Base URL_: `https://api-omar-oceanrisk.herokuapp.com/`
 
-| Description                            | Method | Endpoint                  |
-| :------------------------------------- | :----- | :------------------------ |
-| Fetch                                  | GET    | `/`                       |
-| Fetch initial message                  | GET    | `/`                       |
-| Fetch specific animal info             | GET    | `/animals/name/:name`     |
-| Fetch group of animals by price        | GET    | `/animals/price/price`    |
-| Fetch group of specific animal by kind | GET    | `/animals/huntingKind/:huntingKind` |
-| Fetch group of specific animal by type | GET    | `/animals/type/:type`     |
-| Fetch group of specific animal by month| GET    | `/animals/seasonMonth/:seasonMonth` |
-| Fetch group of specific animal by zone | GET    | `/animals/zone/:zone`     |
-
-
-
+| Description                             | Method | Endpoint                            |
+| :-------------------------------------- | :----- | :---------------------------------- |
+| Fetch                                   | GET    | `/`                                 |
+| Fetch initial message                   | GET    | `/`                                 |
+| Fetch specific animal info              | GET    | `/animals/name/:name`               |
+| Fetch group of animals by price         | GET    | `/animals/price/price`              |
+| Fetch group of specific animal by kind  | GET    | `/animals/huntingKind/:huntingKind` |
+| Fetch group of specific animal by type  | GET    | `/animals/type/:type`               |
+| Fetch group of specific animal by month | GET    | `/animals/seasonMonth/:seasonMonth` |
+| Fetch group of specific animal by zone  | GET    | `/animals/zone/:zone`               |
 
 ## Expected Response Status Codes
 
@@ -38,8 +36,8 @@ _Base URL_: `https://api-omar-oceanrisk.herokuapp.com/`
 - express
 - jest
 - github Actions
-- Nodejs
-- ESLINT
+- NodeJS
+- CORS
 
 ## Getting Started
 
