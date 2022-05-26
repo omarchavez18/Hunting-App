@@ -11,9 +11,9 @@ app.use(cors({ origin: "*" }));
 //eslint-disable-next-line no-undef
 const port = process.env.PORT || 3000;
 
-//endpoint prueba de bienvenida
+//endpoint welcome message or data
 app.get("/", (req, res) => {
-  res.json({ message: "hunting animals" });
+  res.json({ animals });
 });
 
 // endpoint check animals stats by name
