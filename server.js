@@ -1,5 +1,5 @@
 const express = require("express");
-const huntingAnimalService = require("./../hunting/services/huntingAnimalService");
+const huntingAnimalService = require("./services/huntingAnimalService");
 const animals = require("./huntingAnimals");
 const cors = require("cors");
 
