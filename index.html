@@ -19,7 +19,27 @@
       />
       <br />
       <br />
-      <input type="text" id="search" placeholder="write animal name" />
+
+      <select id="search">
+        <option value="">--Please choose an Animal--</option>
+        <option value="Whitetail deer">Whitetail deer</option>
+        <option value="Wapiti">Wapiti</option>
+        <option value="Moose">Moose</option>
+        <option value="Mountain Goat">Mountain Goat</option>
+        <option value="Coues whitetail deer">Coues whitetail deer</option>
+        <option value="Guajolote">Guajolote</option>
+        <option value="Wild boar">Wild boar</option>
+        <option value="Mule deer">Mule deer</option>
+        <option value="Black bear">Black bear</option>
+        <option value="Winter cottontail rabbit">
+          Winter cottontail rabbit
+        </option>
+        <option value="Raccoon">Raccoon</option>
+        <option value="Squirrel">Squirrel</option>
+        <option value="Green head duck">Green head duck</option>
+        <option value="Pecari">Pecari</option>
+      </select>
+
       <button onclick="fetchHunting()">Search</button>
 
       <p id="name"></p>
@@ -36,6 +56,72 @@
       <button onclick="fetchHuntingPrice()">Search</button>
 
       <p id="availableAnimals"></p>
+    </div>
+
+    <div>
+      <h2>Animals by Hunting Kind</h2>
+      <select id="kind">
+        <option value="">--Please choose an option--</option>
+        <option value="small game">small game</option>
+        <option value="big game">big game</option>
+      </select>
+      <button onclick="fetchHuntingKind()">Search</button>
+
+      <p id="huntingKindAnimals"></p>
+    </div>
+
+    <div>
+      <h2>Animals by Type</h2>
+      <select id="type">
+        <option value="">--Select a type--</option>
+        <option value="deer">deer</option>
+        <option value="goat">goat</option>
+        <option value="turkey">turkey</option>
+        <option value="pig">pig</option>
+        <option value="bear">bear</option>
+        <option value="rabbit">rabbit</option>
+        <option value="duck">duck</option>
+      </select>
+
+      <button onclick="fetchHuntingType()">Search</button>
+
+      <p id="huntingTypeAnimals"></p>
+    </div>
+
+    <div>
+      <h2>Animals by Season</h2>
+      <select id="season">
+        <option value="">--Select a Month--</option>
+        <option value="january">january</option>
+        <option value="february">february</option>
+        <option value="march">march</option>
+        <option value="april">april</option>
+        <option value="may">may</option>
+        <option value="june">june</option>
+        <option value="july">july</option>
+        <option value="august">august</option>
+        <option value="september">september</option>
+        <option value="october">october</option>
+        <option value="november">november</option>
+        <option value="december">december</option>
+      </select>
+      <button onclick="fetchHuntingSeason()">Search</button>
+
+      <p id="huntingSeasonAnimals"></p>
+    </div>
+
+    <div>
+      <h2>Animals by Zone</h2>
+      <select id="zone">
+        <option value="">--Select a place--</option>
+        <option value="mexico">mexico</option>
+        <option value="USA">USA</option>
+        <option value="canada">canada</option>
+        <option value="alaska">alaska</option>
+        <option value="north america">north america</option>
+      </select>
+      <button onclick="fetchHuntingZone()">Search</button>
+      <p id="huntingZoneAnimals"></p>
     </div>
   </body>
 </html>
