@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./app.js"></script>
+    <title>Hunting App</title>
+  </head>
+  <body>
+    <h1>Hunting App</h1>
+
+    <div>
+      <h2>Animals By Name</h2>
+      <img
+        src="https://thefederalist.com/wp-content/uploads/2019/01/Meateater-Netflix.jpg"
+        width="30%"
+        id="image"
+      />
+      <br />
+      <br />
+      <input type="text" id="search" placeholder="write animal name" />
+      <button onclick="fetchHunting()">Search</button>
+
+      <p id="name"></p>
+      <p id="kind"></p>
+      <p id="season"></p>
+      <p id="type"></p>
+      <p id="price"></p>
+      <p id="zone"></p>
+    </div>
+
+    <div>
+      <h2>Animals By Price</h2>
+      <input type="number" id="animalPrice" placeholder="write a number" />
+      <button onclick="fetchHuntingPrice()">Search</button>
+
+      <p id="availableAnimals"></p>
+    </div>
+  </body>
+</html>
