@@ -1,9 +1,26 @@
+const showAnimals = (animal, id) => {
+  console.log(id);
+
+  /*this is the way to create a card for the info in html by js */
+  //create
+  let animalName = animal.name;
+  let listItem = document.createElement("li");
+  listItem.innerText = animalName;
+
+  let animalImg = animal.img;
+  let imgItem = document.createElement("img");
+  imgItem.src = animalImg;
+  listItem.appendChild(imgItem);
+
+  let animalsByPrice = document.getElementById(id);
+  animalsByPrice.appendChild(listItem);
+};
+
 // 1) endpoint - animals by name
 const fetchHunting = () => {
-  const search = document.getElementById("search");
-  let input = search.value;
+  const search = document.getElementById("search").value;
 
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/name/${input}`;
+  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/name/${search}`;
 
   fetch(url)
     .then((res) => res.json())
@@ -17,27 +34,24 @@ const fetchHunting = () => {
       elementName.innerHTML = `Name: ${data[0].name}`;
 
       // huntingkind
-      let elementKind = document.getElementById("kind");
+      let elementKind = document.getElementById("kindOf");
       elementKind.innerHTML = `HuntingKind: ${data[0].huntingkind}`;
 
       // season
-      let elementSeason = document.getElementById("season");
+      let elementSeason = document.getElementById("seasonOf");
       elementSeason.innerHTML = `Season: ${data[0].season}`;
-      console.log(data);
 
       // type
-      let elementType = document.getElementById("type");
+      let elementType = document.getElementById("typeOf");
       elementType.innerHTML = `Type: ${data[0].type}`;
-      console.log(data);
 
       // Price
       let elementPrice = document.getElementById("price");
-      elementPrice.innerHTML = `Price: ${data[0].usdPrice}`;
+      elementPrice.innerHTML = `USD-Price: ${data[0].usdPrice}`;
 
       // zone
-      let elementZone = document.getElementById("zone");
+      let elementZone = document.getElementById("zoneOf");
       elementZone.innerHTML = `Zone: ${data[0].zone}`;
-      console.log(data);
     })
     .catch((err) => {
       console.log(err);
@@ -52,42 +66,35 @@ const fetchHunting = () => {
 
 // 2) endpoint - animals by price
 const fetchHuntingPrice = () => {
-  const price = document.getElementById("animalPrice");
-  let input = price.value;
+  const price = document.getElementById("animalPrice").value;
 
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/price/${input}`;
+  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/price/${price}`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => {
-      //animals available by price
-
-      let animalsByPrice = document.getElementById("availableAnimals");
-      animalsByPrice.innerHTML = `Animals Available By Price: ${data}`;
+    .then((animals) => {
+      animals.forEach((animal) => showAnimals(animal, "availableAnimals"));
     });
 };
 
 // 3) endpoint - animals by huntingkind
 
 const fetchHuntingKind = () => {
-  const kind = document.getElementById("kind");
-  let input = kind.value;
+  const kind = document.getElementById("kind").value;
 
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/huntingkind/${input}`;
+  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/huntingkind/${kind}`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => {
+    .then((animals) => {
       //animals available by hunting kind
-      let animalsByKind = document.getElementById("huntingKindAnimals");
-      animalsByKind.innerHTML = `Animals available by hunting kind: ${data}`;
+      animals.forEach((animal) => showAnimals(animal, "huntingKindAnimals"));
     });
 };
 
 //4) endpoint - animals by type
 const fetchHuntingType = () => {
-  const type = document.getElementById("type");
-  let input = type.value;
+  const type = document.getElementById("type").value;
 
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/type/${input}`;
+  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/type/${type}`;
   fetch(url)
     .then((res) => res.json())
     .then((info) => {
@@ -99,10 +106,9 @@ const fetchHuntingType = () => {
 // 5) endpoint - animal by season
 
 const fetchHuntingSeason = () => {
-  const season = document.getElementById("season");
-  let input = season.value;
+  const season = document.getElementById("season").value;
 
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/seasonMonth/${input}`;
+  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/seasonMonth/${season}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
@@ -113,10 +119,9 @@ const fetchHuntingSeason = () => {
 
 // 6) endpoint - animals by zone
 const fetchHuntingZone = () => {
-  const zone = document.getElementById("zone");
-  let input = zone.value;
+  const zone = document.getElementById("zone").value;
 
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/zone/${input}`;
+  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/zone/${zone}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
