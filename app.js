@@ -1,8 +1,5 @@
 const showAnimals = (animal, id) => {
-  console.log(id);
-
   /*this is the way to create a card for the info in html by js */
-  //create
   let animalName = animal.name;
   let listItem = document.createElement("li");
   listItem.innerText = animalName;
