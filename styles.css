@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: small;
 }
 
@@ -12,7 +12,7 @@ a:hover {
   color: #f7c759;
 }
 
-h2 {
+.h2Video {
   font-size: 15px;
 }
 
@@ -72,7 +72,7 @@ h2 {
 }
 
 .video video {
-  width: auto;
+  width: 100%;
   display: block;
 }
 
@@ -104,12 +104,13 @@ h2 {
 .imageContainer img {
   width: 100%;
   opacity: 0.7;
+  padding-top: 2rem;
 }
 
 .imageContainer .overlay1 {
   font-family: "Bebas Neue", cursive;
   position: absolute;
-  top: 30%;
+  top: 44%;
   width: 100%;
   text-align: center;
   font-size: 3rem;
@@ -123,15 +124,45 @@ h2 {
 }
 
 .textAndCarousel .textSection {
+  margin-right: 0.5rem;
+  border-radius: 3%;
   width: 50%;
+}
+
+.textAndCarousel .textSection h3 {
+  font-family: "Bebas Neue", cursive;
+}
+
+.textAndCarousel .textSection .pTextSection {
+  color: #ff6319;
+  margin-bottom: 0;
+}
+
+.textAndCarousel .textSection .stevenPhoto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.textAndCarousel .textSection .circle {
+  border-radius: 50%;
+  width: 2rem;
+}
+
+.textAndCarousel .textSection p {
+  color: #a0a0a0;
+}
+
+.textAndCarousel .textSection em {
+  color: #b13d08;
 }
 
 .animalsByName {
   display: block;
-}
-
-.carousel {
-  width: 10rem;
 }
 
 .animalsByName p {

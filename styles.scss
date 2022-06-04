@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: small;
 }
 a {
@@ -9,7 +9,7 @@ a {
 a:hover {
   color: #f7c759;
 }
-h2 {
+.h2Video {
   font-size: 15px;
 }
 
@@ -51,7 +51,7 @@ h2 {
   }
 
   video {
-    width: auto;
+    width: 100%;
     display: block;
   }
 }
@@ -82,11 +82,12 @@ h2 {
   img {
     width: 100%;
     opacity: 0.7;
+    padding-top: 2rem;
   }
   .overlay1 {
     font-family: "Bebas Neue", cursive;
     position: absolute;
-    top: 30%;
+    top: 44%;
     width: 100%;
     text-align: center;
     font-size: 3rem;
@@ -99,15 +100,37 @@ h2 {
   margin: 0.5rem;
 
   .textSection {
+    margin-right: 0.5rem;
+    border-radius: 3%;
     width: 50%;
+
+    h3 {
+      font-family: "Bebas Neue", cursive;
+    }
+    .pTextSection {
+      color: #ff6319;
+      margin-bottom: 0;
+    }
+    .stevenPhoto {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .circle {
+      border-radius: 50%;
+      width: 2rem;
+    }
+    p {
+      color: #a0a0a0;
+    }
+    em {
+      color: #b13d08;
+    }
   }
 }
 
 .animalsByName {
   display: block;
-}
-.carousel {
-  width: 10rem;
 }
 
 .animalsByName {
