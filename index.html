@@ -5,13 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./app.js"></script>
-    <link rel="icon" href="https://thefederalist.com/wp-content/uploads/2019/01/Meateater-Netflix.jpg" />
-    <title>Hunting App</title>
+    <link rel="stylesheet" href=" 	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="./images/huntingNationLogo.png" />
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles.css">
+    
+    <title>Hunting Nation</title>
   </head>
   <body>
-    <h1>Hunting App</h1>
 
-    <div>
+    <!-- nav-bar -->
+    <header class="header">
+      <div class="headerContent">
+        <div class="headerContentLogo">
+        <video class="videoLogo" autoplay>
+          <source  src="./video/Hunting Nation - copia.mp4"/>
+        </video>
+        <h1>
+          <a  href="#">Hunting Nation</a>
+        </h1>
+      </div>
+        <nav class="nav">
+          <a href="#funFact">Fun fact</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#huntApp">Hunt app</a>
+          <a href="#about">About</a>
+        </nav>
+      </div>
+    </header>
+
+<!-- initial video section -->
+    <section>
+      <div class="video">
+        <div class="overlay">
+          <div class="conteiner container-video">
+            <h2>The Experience of Hunting.</h2>
+            <p>Live to hunt and hunt to live.</p>
+          </div>
+        </div>
+        <video src="./video/MeatEater Season 7 Steve and Remi Hunt Late Season Montana Bulls.mp4" autoplay loop muted    >
+        </video>
+      </div>
+    </section>
+
+
+    <!-- image section -->
+   <div class="imageContainer">
+     <img src="./images/bowhunter.jpg" alt="bow hunter">
+     <div class="overlay1">Are you ready for the hunting?</div>
+   </div>
+    
+    
+   <!-- TEXT & CAROUSEL -->
+<section class="textAndCarousel">
+   <!-- TEXT -->
+<div class="textSection">
+  <h2>Big Game Hunting</h2>
+  <p>There are many kinds of animals in the big game hunting,
+    like the big Moose in Canada and Alaska  and
+    others not too significant like the Coues whitetail deer in Mexico and the US.</p>
+</div>
+
+   <!-- BOOSTRAP CAROUSEL -->
+<div id="carouselExampleIndicators" class="carousel slide w-50" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner " >
+    <div class="carousel-item active" data-bs-interval="2000" >
+      <img src="https://static.inaturalist.org/photos/34817878/large.jpg" class="d-block w-100 imageCarousel" alt="...">
+    </div>
+    <div class="carousel-item carousel-fade" data-bs-interval="2000">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/White-tailed_deer.jpg" class="d-block w-100 imageCarousel" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://cdn.britannica.com/15/9915-050-D2E694F6/Mule-deer-buck.jpg" class="d-block w-100 imageCarousel" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://www.fieldandstream.com/uploads/2021/11/16/Muley-Rut.jpg?auto=webp" class="d-block w-100 imageCarousel" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+
+
+
+    <div class="animalsByName">
       <h2>Animals By Name</h2>
 
       <select id="search">
@@ -34,10 +130,10 @@
         <option value="Pecari">Pecari</option>
       </select>
 
-      <button onclick="fetchHunting()">Search</button>
+      <button class="btn btn-outline-success" onclick="fetchHunting()">Search</button>
       <br /><br />
       <img
-        src="https://thefederalist.com/wp-content/uploads/2019/01/Meateater-Netflix.jpg"
+        src="./images/landscape.png"
         width="30%"
         id="image"
       />
@@ -124,5 +220,7 @@
       <button onclick="fetchHuntingZone()">Search</button>
       <p id="huntingZoneAnimals"></p>
     </div>
+
+
   </body>
 </html>
