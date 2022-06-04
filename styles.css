@@ -16,6 +16,14 @@ a:hover {
   font-size: 15px;
 }
 
+.btn {
+  color: white;
+}
+
+.btn:hover {
+  color: #f7c759;
+}
+
 .headerContent {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,8 +169,37 @@ a:hover {
   color: #b13d08;
 }
 
+.funFact1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.funFact1 .image1 {
+  width: 99%;
+}
+
+.funFact1 .funFactInfo1 {
+  width: 100%;
+}
+
+.funFact1 .funFactInfo1 h5 {
+  font-family: "Bebas Neue", cursive;
+}
+
+.funFact1 .funFactInfo1 em {
+  color: #b13d08;
+}
+
+.funFact1 .funFactInfo1 p {
+  font-size: 12.5px;
+  color: #a0a0a0;
+}
+
 .animalsByName {
-  display: block;
+  position: block;
 }
 
 .animalsByName p {
