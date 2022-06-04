@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #f7c759;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+.headerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: black;
+}
+
+.headerContent .headerContentLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.headerContent .headerContentLogo .videoLogo {
+  width: 7rem;
+}
+
+.headerContent h1 {
+  padding-top: 2rem;
+}
+
+.headerContent nav {
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+  font-size: 1.2rem;
+}
+
+.video {
+  position: relative;
+  max-height: 70rem;
+  min-height: 46rem;
+  overflow: hidden;
+}
+
+.video .overlay {
+  position: absolute;
+  height: 90%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.video video {
+  width: auto;
+  display: block;
+}
+
+.container-video {
+  margin-left: 1rem;
+  font-family: "Bebas Neue", cursive;
+}
+
+.container-video h2 {
+  color: white;
+  font-size: 4.5rem;
+  margin: 0;
+}
+
+.container-video p {
+  background-color: #f7c8598c;
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin: 2rem 0;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.imageContainer img {
+  width: 100%;
+  opacity: 0.7;
+}
+
+.imageContainer .overlay1 {
+  font-family: "Bebas Neue", cursive;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.textAndCarousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5rem;
+}
+
+.textAndCarousel .textSection {
+  width: 50%;
+}
+
+.animalsByName {
+  display: block;
+}
+
+.carousel {
+  width: 10rem;
+}
+
+.animalsByName p {
+  display: none;
+}
+
+.animalsByName:hover p {
+  display: block;
+}
+/*# sourceMappingURL=styles.css.map */
