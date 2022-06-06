@@ -126,3 +126,25 @@ const fetchHuntingZone = () => {
       animalsByZone.innerHTML = `Animals available by zone: ${data}`;
     });
 };
+
+//GALLERY
+
+// FUNCTION TO CREATE A GALLERY
+document.addEventListener("DOMContentLoaded", function () {
+  RunApp();
+});
+
+function RunApp() {
+  createGallery();
+}
+
+function createGallery() {
+  const gallery = document.querySelector(".galleryImages");
+
+  // FOR THIS SECTION THE NAME OF YOUR IMAGES MOST BE NUMBERS = 1,2,3,4,5,6 ETC...
+  for (let i = 1; i <= 10; i++) {
+    const image = document.createElement("picture");
+    image.innerHTML = `<img class="galleryPhotos" src="./images/${i}.jpg" />`;
+    gallery.appendChild(image);
+  }
+}
