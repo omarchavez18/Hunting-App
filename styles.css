@@ -3,6 +3,24 @@ body {
   font-size: small;
 }
 
+.image {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
+}
+
+.image:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -198,6 +216,16 @@ a:hover {
   color: #a0a0a0;
 }
 
+.food {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  gap: 0.5rem;
+}
+
+.size {
+  width: 100%;
+}
+
 .animalsByName {
   position: block;
 }
@@ -208,5 +236,60 @@ a:hover {
 
 .animalsByName:hover p {
   display: block;
+}
+
+.funFactInfo2 {
+  width: 100%;
+}
+
+.funFactInfo2 .firstSection {
+  color: #ff6319;
+}
+
+.funFactInfo2 h5 {
+  font-family: "Bebas Neue", cursive;
+}
+
+.funFactInfo2 em {
+  color: #b13d08;
+}
+
+.funFactInfo2 p {
+  font-size: 12.5px;
+  color: #a0a0a0;
+}
+
+#gallery {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  font-family: "Bebas Neue", cursive;
+}
+
+.galleryImages {
+  padding-left: 0.6rem;
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.galleryImages > picture {
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.galleryImages > picture:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+
+.galleryPhotos {
+  width: 230px;
+  height: 230px;
 }
 /*# sourceMappingURL=styles.css.map */
