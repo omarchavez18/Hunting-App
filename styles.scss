@@ -2,9 +2,10 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: small;
 }
+
 .image {
   transform: scale(1);
-  transition: all 800ms ease-in-out;
+  transition: all 600ms ease-in-out;
 }
 .image:hover {
   transform: scale(1.06);
@@ -58,7 +59,7 @@ a:hover {
   min-height: 46rem;
   overflow: hidden;
 
-  .overlay {
+  .overlayVideo {
     position: absolute;
     height: 90%;
     width: 100%;
@@ -177,16 +178,6 @@ a:hover {
 .size {
   width: 100%;
 }
-.animalsByName {
-  position: block;
-  p {
-    display: none;
-  }
-
-  &:hover p {
-    display: block;
-  }
-}
 
 .funFactInfo2 {
   .firstSection {
@@ -208,9 +199,11 @@ a:hover {
 //gallery
 #gallery {
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
   font-family: "Bebas Neue", cursive;
+  color: white;
+  background-color: black;
 }
 
 .galleryImages {
@@ -234,4 +227,202 @@ a:hover {
 .galleryPhotos {
   width: 230px;
   height: 230px;
+  box-shadow: 16px 11px 12px black;
+}
+
+// MODAL
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center; // centra la imagen
+
+  // obscurece el exterior de la imagen para resaltar la imagen
+  background-color: rgba(0, 0, 0, 0.596);
+
+  picture {
+    display: block;
+    max-width: 100rem;
+
+    img {
+      width: 35rem;
+      height: auto;
+    }
+  }
+}
+
+.close-btn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.close-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+//about
+.about {
+  text-align: center;
+  border: solid black 3px;
+  width: 50rem;
+  margin: auto;
+  //animation
+  position: relative;
+  animation-name: mymove;
+  animation: mymove 5s;
+  //animation instruction
+  @keyframes mymove {
+    from {
+      bottom: 0px;
+    }
+    to {
+      bottom: 50px;
+    }
+  }
+  h2 {
+    font-family: "Bebas Neue", cursive;
+    color: white;
+    background-color: #000000;
+  }
+}
+
+.about > p {
+  em {
+    color: #b13d08;
+  }
+  color: #a0a0a0;
+}
+
+// HUNT APP
+
+//searchBtn
+.searchBtn {
+  color: #198754;
+  border: 1px solid #198754;
+  border-radius: 5px;
+  background-color: white;
+}
+.searchBtn:hover {
+  color: white;
+  background-color: #198754;
+}
+
+//ANIMAL BY NAME
+//CARD
+
+.sectionCard {
+  background-image: url("./images/13.jpg");
+  display: block;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.oneCard {
+  //border: 3px solid #f7c759;
+  width: 25rem;
+  background-image: url("./images/hunter1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 45rem;
+
+  background-color: #000000c0;
+  color: white;
+  text-align: center;
+}
+
+.animalsByName {
+  margin-top: 4rem;
+  text-align: center;
+  position: block;
+
+  h2 {
+    font-family: "Bebas Neue", cursive;
+    background-color: black;
+    color: white;
+    margin-bottom: 2rem;
+    margin: 0.5rem;
+  }
+  .aBNP {
+    display: none;
+  }
+  #search {
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    &:hover p {
+      display: block;
+    }
+  }
+}
+
+//ANIMALS BY PRICE
+.priceAnimals {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  li {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    width: 9rem;
+    box-shadow: 11px 5px 10px black;
+  }
+  img {
+    min-width: 100%;
+  }
+}
+
+.lastInfo {
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+
+  div {
+    border: 2px groove black;
+    box-shadow: 5px 10px #494848;
+    margin: 1rem;
+
+    border-radius: 5px;
+
+    ul {
+      color: #a0a0a0;
+    }
+  }
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+
+  video {
+    width: 10rem;
+  }
 }
