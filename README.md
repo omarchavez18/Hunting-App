@@ -1,4 +1,6 @@
 # Hunting-App
+To see the page click in the next link
+[HuntApp](https://omarchavez18.github.io/Hunting-App/)
 
 FrontEnd Documentation.
 Description.
