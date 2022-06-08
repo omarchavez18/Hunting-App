@@ -3,14 +3,14 @@
 FrontEnd Documentation.
 Description.
 
-          This page is made to help the <em>hunters</em> search for information
-          about hunting season, tips for beginners, recipes, value data about
-          turkey hunting, and an app to look with specific filters about
-          different types of hunting. <br />
+ This page is made to help the hunters search for information
+ about hunting season, tips for beginners, recipes, value data about
+ turkey hunting, and an app to look with specific filters about
+ different types of hunting.
 
-          Perhaps you´re interested in many stuff about these topics I share
-          with you a couple of links where you can find info about gear, guns,
-          videos, and interesting things might you can find useful.
+ Perhaps you´re interested in many stuff about these topics I share
+ with you a couple of links where you can find info about gear, guns,
+ videos, and interesting things might you can find useful.
         
 
 Hunting app about the season, zone, type, price, and animals stats, the app show you all the animals if you want a big or small game and many more things to come.
