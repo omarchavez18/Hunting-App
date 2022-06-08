@@ -67,7 +67,7 @@
     <!-- initial video section -->
     <section>
       <div class="video">
-        <div class="overlay">
+        <div class="overlayVideo">
           <div class="conteiner container-video">
             <h2 class="h2Video">The Experience of Hunting.</h2>
             <p>Live to hunt and hunt to live.</p>
@@ -185,7 +185,7 @@
           </div>
           <div class="carousel-item" data-bs-interval="2000">
             <img
-              src="./images/moose1.jpg"
+              src="./images/snowdeer.webp"
               class="d-block w-100 imageCarousel"
               alt="..."
             />
@@ -326,9 +326,36 @@
       <ul class="galleryImages"></ul>
     </section>
 
-    <div class="animalsByName">
-      <h2>Animals By Name</h2>
+    <!-- ABOUT -->
 
+    <section style="margin-top: 6rem">
+      <div class="about">
+        <h2 id="about">About</h2>
+        <p>
+          This page is made to help the <em>hunters</em> search for information
+          about hunting season, tips for beginners, recipes, value data about
+          turkey hunting, and an app to look with specific filters about
+          different types of hunting. <br />
+
+          Perhaps you´re interested in many stuff about these topics I share
+          with you a couple of links where you can find info about gear, guns,
+          videos, and interesting things might you can find useful.
+        </p>
+        <a href="https://www.themeateater.com/" target="_blank">
+          <img width="250rem" src="./images/meateaterLogo.webp" alt=""
+        /></a>
+        <a href="https://www.basspro.com/shop/en#" target="_blank"
+          ><img src="./images/basspro.png" alt=""
+        /></a>
+      </div>
+    </section>
+
+    <!-- HUNT APP -->
+
+    <!-- ANIMALS BY NAME -->
+    <div class="animalsByName">
+      <h2 id="huntApp">Hunt App</h2>
+      <h3>Animals By Name</h3>
       <select id="search">
         <option value="">--Please choose an Animal--</option>
         <option value="Whitetail deer">Whitetail deer</option>
@@ -348,41 +375,47 @@
         <option value="Green head duck">Green head duck</option>
         <option value="Pecari">Pecari</option>
       </select>
-
-      <button class="btn btn-outline-success" onclick="fetchHunting()">
-        Search
-      </button>
-      <br /><br />
-      <img src="./images/landscape.png" width="30%" id="image" />
-      <p id="name"></p>
-      <p id="kindOf"></p>
-      <p id="seasonOf"></p>
-      <p id="typeOf"></p>
-      <p id="price"></p>
-      <p id="zoneOf"></p>
-    </div>
-
-    <div>
-      <h2>Animals By Price</h2>
-      <input type="number" id="animalPrice" placeholder="write a number" />
-      <button onclick="fetchHuntingPrice()">Search</button>
-
+      <button  class="searchBtn" onclick="fetchHunting()">Search</button>
+      
+      
+      <section class="sectionCard">
+        <div class="card oneCard" >
+          <img  id="image" src="" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <p  class="card-text aBNP" id="name"></p>
+            <p  class="card-text aBNP" id="kindOf"></p>
+            <p  class="card-text aBNP" id="seasonOf"></p>
+            <p  class="card-text aBNP" id="typeOf"></p>
+            <p  class="card-text aBNP" id="price"></p>
+            <p  class="card-text aBNP" id="zoneOf"></p>
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- ANIMALS BY Price -->
+      <div style="margin-top: 3rem;">
+        <h2>Animals By Price</h2>
+        <input type="number" min="25" max="850" id="animalPrice" placeholder="write a number" />
+      <button  class="searchBtn" onclick="fetchHuntingPrice()">Search</button>
       <h3>Animals Available By Price:</h3>
-      <ul id="availableAnimals"></ul>
+      <ul id="availableAnimals" class="priceAnimals"></ul>
     </div>
-
-    <div>
+    
+    <div class="kinder">
       <h2>Animals by Hunting Kind</h2>
       <select id="kind">
         <option value="">--Please choose an option--</option>
         <option value="small game">small game</option>
         <option value="big game">big game</option>
       </select>
-      <button onclick="fetchHuntingKind()">Search</button>
-
-      <p id="huntingKindAnimals"></p>
+      <button  class="searchBtn" onclick="fetchHuntingKind()">Search</button>
+      
+      <ul id="huntingKindAnimals"class="priceAnimals" ></ul>
     </div>
+    
 
+    <section class="lastInfo">
     <div>
       <h2>Animals by Type</h2>
       <select id="type">
@@ -396,11 +429,11 @@
         <option value="duck">duck</option>
       </select>
 
-      <button onclick="fetchHuntingType()">Search</button>
-
-      <p id="huntingTypeAnimals"></p>
+      <button  class="searchBtn" onclick="fetchHuntingType()">Search</button>
+      
+      <ul id="huntingTypeAnimals"></ul>
     </div>
-
+    
     <div>
       <h2>Animals by Season</h2>
       <select id="season">
@@ -418,9 +451,10 @@
         <option value="november">november</option>
         <option value="december">december</option>
       </select>
-      <button onclick="fetchHuntingSeason()">Search</button>
+      <button type="button" class="searchBtn" onclick="fetchHuntingSeason()">Search</button>
+    
 
-      <p id="huntingSeasonAnimals"></p>
+      <ul id="huntingSeasonAnimals"></ul>
     </div>
 
     <div>
@@ -433,8 +467,18 @@
         <option value="alaska">alaska</option>
         <option value="north america">north america</option>
       </select>
-      <button onclick="fetchHuntingZone()">Search</button>
-      <p id="huntingZoneAnimals"></p>
+      <button  class="searchBtn" onclick="fetchHuntingZone()">Search</button>
+      <ul id="huntingZoneAnimals"></ul>
     </div>
+  </section>
+  
+  <footer class="footer">
+    <a href="#"><video autoplay src="./video/Hunting Nation - copia.mp4"></video></a>
+    <a href="#"><h3>huntingNation</h3></a>
+    <p>Developed page by <a href="https://github.com/omarchavez18" target="_blank">omarchavez18</a></p>
+  </footer>
+
+
   </body>
-</html>
+  </html>
+  
