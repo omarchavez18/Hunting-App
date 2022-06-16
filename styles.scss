@@ -589,4 +589,10 @@ footer {
   .video {
     min-height: 27rem;
   }
+  .textAndCarousel {
+    flex-direction: column;
+    .textSection {
+      width: 99%;
+    }
+  }
 }
