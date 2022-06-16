@@ -685,5 +685,14 @@ footer video {
   .video {
     min-height: 27rem;
   }
+  .textAndCarousel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textAndCarousel .textSection {
+    width: 99%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
