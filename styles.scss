@@ -146,6 +146,10 @@ a:hover {
     }
   }
 }
+.w-100 {
+  width: 40rem !important;
+  height: 27rem;
+}
 
 .funFact1 {
   display: flex;
@@ -336,7 +340,6 @@ a:hover {
 }
 
 .oneCard {
-  //border: 3px solid #f7c759;
   width: 25rem;
   background-image: url("./images/hunter1.jpg");
   background-repeat: no-repeat;
@@ -362,6 +365,7 @@ a:hover {
   }
   .aBNP {
     display: none;
+    transition: all 2000ms;
   }
   #search {
     margin-bottom: 2rem;
@@ -386,11 +390,12 @@ a:hover {
     display: flex;
     flex-direction: column;
     border: solid 1px black;
-    width: 9rem;
+    width: 12rem;
     box-shadow: 11px 5px 10px black;
   }
   img {
-    min-width: 100%;
+    width: 11.9rem;
+    height: 11rem;
   }
 }
 
@@ -432,8 +437,12 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .headerContent h1 {
+    padding-top: 0rem;
+  }
   .headerContentLogo {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0;
@@ -482,7 +491,11 @@ footer {
   .textAndCarousel {
     display: flex;
     flex-direction: column;
-    width: 57rem;
+    width: 29rem;
+
+    .textSection {
+      width: 100%;
+    }
   }
 
   .funFact1 {
@@ -500,14 +513,24 @@ footer {
     width: 215px;
     height: 215px;
   }
+  .size {
+    width: 50%;
+  }
 
   .overlay picture img {
-    width: 15rem;
+    width: 22rem;
     height: auto;
+  }
+  .w-50 {
+    width: 99% !important;
+  }
+  .w-100 {
+    width: 29rem !important;
+    height: 19rem;
   }
 
   .about {
-    width: 29rem;
+    width: 100%;
   }
 
   .oneCard {

@@ -187,6 +187,11 @@ a:hover {
   color: #b13d08;
 }
 
+.w-100 {
+  width: 40rem !important;
+  height: 27rem;
+}
+
 .funFact1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,6 +427,8 @@ a:hover {
 
 .animalsByName .aBNP {
   display: none;
+  -webkit-transition: all 2000ms;
+  transition: all 2000ms;
 }
 
 .animalsByName #search {
@@ -455,13 +462,14 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   border: solid 1px black;
-  width: 9rem;
+  width: 12rem;
   -webkit-box-shadow: 11px 5px 10px black;
           box-shadow: 11px 5px 10px black;
 }
 
 .priceAnimals img {
-  min-width: 100%;
+  width: 11.9rem;
+  height: 11rem;
 }
 
 .lastInfo {
@@ -515,10 +523,17 @@ footer video {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .headerContent h1 {
+    padding-top: 0rem;
+  }
   .headerContentLogo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -574,7 +589,10 @@ footer video {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 57rem;
+    width: 29rem;
+  }
+  .textAndCarousel .textSection {
+    width: 100%;
   }
   .funFact1 {
     display: -webkit-box;
@@ -597,12 +615,22 @@ footer video {
     width: 215px;
     height: 215px;
   }
+  .size {
+    width: 50%;
+  }
   .overlay picture img {
-    width: 15rem;
+    width: 22rem;
     height: auto;
   }
+  .w-50 {
+    width: 99% !important;
+  }
+  .w-100 {
+    width: 29rem !important;
+    height: 19rem;
+  }
   .about {
-    width: 29rem;
+    width: 100%;
   }
   .oneCard {
     width: 21rem;
