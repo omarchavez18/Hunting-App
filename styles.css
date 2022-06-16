@@ -675,4 +675,15 @@ footer video {
     width: 5rem;
   }
 }
+
+@media (max-width: 768px) {
+  .headerContent nav {
+    padding-top: 2rem;
+    gap: 2rem;
+    font-size: 0.9rem;
+  }
+  .video {
+    min-height: 27rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

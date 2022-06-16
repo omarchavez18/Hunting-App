@@ -432,6 +432,7 @@ footer {
   }
 }
 
+// cellphone size
 @media (max-width: 480px) {
   .headerContent {
     display: flex;
@@ -574,5 +575,18 @@ footer {
   }
   .footer video {
     width: 5rem;
+  }
+}
+
+// tablet size
+
+@media (max-width: 768px) {
+  .headerContent nav {
+    padding-top: 2rem;
+    gap: 2rem;
+    font-size: 0.9rem;
+  }
+  .video {
+    min-height: 27rem;
   }
 }
