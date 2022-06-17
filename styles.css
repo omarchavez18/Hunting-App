@@ -558,7 +558,7 @@ footer video {
     padding-bottom: 1rem;
   }
   .video {
-    min-height: 13rem;
+    min-height: 16rem !important;
   }
   .overlayVideo {
     width: 100%;
@@ -590,9 +590,13 @@ footer video {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 29rem;
+    margin: 0.5rem !important;
   }
   .textAndCarousel .textSection {
-    width: 100%;
+    width: 95% !important;
+  }
+  .carousel-inner {
+    width: 26rem !important;
   }
   .funFact1 {
     display: -webkit-box;
@@ -604,12 +608,15 @@ footer video {
             flex-direction: column;
     width: 29.5rem;
   }
+  .funFactInfo1 {
+    width: 95% !important;
+  }
   #gallery {
     margin: 0.5rem;
   }
   .galleryImages {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
   }
   .galleryPhotos {
     width: 206px;
@@ -626,15 +633,15 @@ footer video {
     width: 99% !important;
   }
   .w-100 {
-    width: 29rem !important;
+    width: 28rem !important;
     height: 19rem;
   }
   .about {
-    width: 90%;
+    width: 25rem !important;
   }
   .oneCard {
     width: 21rem;
-    margin-left: 5rem;
+    margin-left: 5rem !important;
   }
   .priceAnimals {
     padding: 0;
