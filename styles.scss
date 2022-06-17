@@ -590,9 +590,36 @@ footer {
     min-height: 27rem;
   }
   .textAndCarousel {
+    margin: 2.5rem;
     flex-direction: column;
     .textSection {
       width: 99%;
     }
+  }
+  .carousel {
+    margin: auto;
+  }
+  .carousel-inner {
+    width: 40rem;
+  }
+  .w-50 {
+    width: 95% !important;
+  }
+  .funFact1 {
+    flex-direction: column;
+  }
+  .galleryImages {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0;
+  }
+  .about {
+    width: 40rem;
+  }
+  .oneCard {
+    margin-left: 11rem;
+  }
+
+  ul {
+    padding-left: 0;
   }
 }

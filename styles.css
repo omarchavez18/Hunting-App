@@ -686,6 +686,7 @@ footer video {
     min-height: 27rem;
   }
   .textAndCarousel {
+    margin: 2.5rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -693,6 +694,36 @@ footer video {
   }
   .textAndCarousel .textSection {
     width: 99%;
+  }
+  .carousel {
+    margin: auto;
+  }
+  .carousel-inner {
+    width: 40rem;
+  }
+  .w-50 {
+    width: 95% !important;
+  }
+  .funFact1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .galleryImages {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+  .about {
+    width: 40rem;
+  }
+  .oneCard {
+    margin-left: 11rem;
+  }
+  ul {
+    padding-left: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
