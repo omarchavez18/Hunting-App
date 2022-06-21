@@ -375,110 +375,119 @@
         <option value="Green head duck">Green head duck</option>
         <option value="Pecari">Pecari</option>
       </select>
-      <button  class="searchBtn" onclick="fetchHunting()">Search</button>
-      
-      
+      <button class="searchBtn" onclick="fetchHunting()">Search</button>
       <section class="sectionCard">
-        <div class="card oneCard" >
-          <img  id="image" src="" class="card-img-top" alt="..." />
+        <div class="card oneCard">
+          <img id="image" src="" class="card-img-top" alt="..." />
           <div class="card-body">
-            <p  class="card-text aBNP" id="name"></p>
-            <p  class="card-text aBNP" id="kindOf"></p>
-            <p  class="card-text aBNP" id="seasonOf"></p>
-            <p  class="card-text aBNP" id="typeOf"></p>
-            <p  class="card-text aBNP" id="price"></p>
-            <p  class="card-text aBNP" id="zoneOf"></p>
+            <p class="card-text aBNP" id="name"></p>
+            <p class="card-text aBNP" id="kindOf"></p>
+            <p class="card-text aBNP" id="seasonOf"></p>
+            <p class="card-text aBNP" id="typeOf"></p>
+            <p class="card-text aBNP" id="price"></p>
+            <p class="card-text aBNP" id="zoneOf"></p>
           </div>
         </div>
       </section>
-      
-      
+
       <!-- ANIMALS BY Price -->
-      <div style="margin-top: 3rem;">
+      <div id="fatherPrice" style="margin-top: 3rem">
         <h2>Animals By Price</h2>
-        <input type="number" min="25" max="850" id="animalPrice" placeholder="write a number" />
-      <button  class="searchBtn" onclick="fetchHuntingPrice()">Search</button>
-      <h3>Animals Available By Price:</h3>
-      <ul id="availableAnimals" class="priceAnimals"></ul>
+        <input
+          type="number"
+          min="25"
+          max="850"
+          id="animalPrice"
+          placeholder="write a number"
+        />
+
+        <button class="searchBtn" onclick="fetchHuntingPrice()">Search</button>
+        <h3>Animals Available By Price:</h3>
+        <div id="errorPrice"></div>
+        <ul id="availableAnimals" class="priceAnimals"></ul>
+      </div>
+      <div id="fatherKind">
+        <h2>Animals by Hunting Kind</h2>
+        <select id="kind">
+          <option value="">--Please choose an option--</option>
+          <option value="small game">small game</option>
+          <option value="big game">big game</option>
+        </select>
+        <button class="searchBtn" onclick="fetchHuntingKind()">Search</button>
+        <div id="errorKind"></div>
+        <ul id="huntingKindAnimals" class="priceAnimals"></ul>
+      </div>
     </div>
-    
-    <div >
-      <h2>Animals by Hunting Kind</h2>
-      <select id="kind">
-        <option value="">--Please choose an option--</option>
-        <option value="small game">small game</option>
-        <option value="big game">big game</option>
-      </select>
-      <button  class="searchBtn" onclick="fetchHuntingKind()">Search</button>
-      
-      <ul id="huntingKindAnimals"class="priceAnimals" ></ul>
-    </div>
-    
 
     <section class="lastInfo">
-    <div>
-      <h2>Animals by Type</h2>
-      <select id="type">
-        <option value="">--Select a type--</option>
-        <option value="deer">deer</option>
-        <option value="goat">goat</option>
-        <option value="turkey">turkey</option>
-        <option value="pig">pig</option>
-        <option value="bear">bear</option>
-        <option value="rabbit">rabbit</option>
-        <option value="duck">duck</option>
-      </select>
+      <div>
+        <h2>Animals by Type</h2>
+        <select id="type">
+          <option value="">--Select a type--</option>
+          <option value="deer">deer</option>
+          <option value="goat">goat</option>
+          <option value="turkey">turkey</option>
+          <option value="pig">pig</option>
+          <option value="bear">bear</option>
+          <option value="rabbit">rabbit</option>
+          <option value="duck">duck</option>
+        </select>
 
-      <button  class="searchBtn" onclick="fetchHuntingType()">Search</button>
-      
-      <ul id="huntingTypeAnimals"></ul>
-    </div>
-    
-    <div>
-      <h2>Animals by Season</h2>
-      <select id="season">
-        <option value="">--Select a Month--</option>
-        <option value="january">january</option>
-        <option value="february">february</option>
-        <option value="march">march</option>
-        <option value="april">april</option>
-        <option value="may">may</option>
-        <option value="june">june</option>
-        <option value="july">july</option>
-        <option value="august">august</option>
-        <option value="september">september</option>
-        <option value="october">october</option>
-        <option value="november">november</option>
-        <option value="december">december</option>
-      </select>
-      <button type="button" class="searchBtn" onclick="fetchHuntingSeason()">Search</button>
-    
+        <button class="searchBtn" onclick="fetchHuntingType()">Search</button>
 
-      <ul id="huntingSeasonAnimals"></ul>
-    </div>
+        <ul id="huntingTypeAnimals"></ul>
+      </div>
 
-    <div class="aBZ">
-      <h2>Animals by Zone</h2>
-      <select id="zone">
-        <option value="">--Select a place--</option>
-        <option value="mexico">mexico</option>
-        <option value="USA">USA</option>
-        <option value="canada">canada</option>
-        <option value="alaska">alaska</option>
-        <option value="north america">north america</option>
-      </select>
-      <button  class="searchBtn" onclick="fetchHuntingZone()">Search</button>
-      <ul id="huntingZoneAnimals"></ul>
-    </div>
-  </section>
-  
-  <footer class="footer">
-    <a href="#"><video autoplay src="./video/Hunting Nation - copia.mp4"></video></a>
-    <a href="#"><h3>huntingNation</h3></a>
-    <p>Developed page by <a href="https://github.com/omarchavez18" target="_blank">omarchavez18</a></p>
-  </footer>
+      <div>
+        <h2>Animals by Season</h2>
+        <select id="season">
+          <option value="">--Select a Month--</option>
+          <option value="january">january</option>
+          <option value="february">february</option>
+          <option value="march">march</option>
+          <option value="april">april</option>
+          <option value="may">may</option>
+          <option value="june">june</option>
+          <option value="july">july</option>
+          <option value="august">august</option>
+          <option value="september">september</option>
+          <option value="october">october</option>
+          <option value="november">november</option>
+          <option value="december">december</option>
+        </select>
+        <button type="button" class="searchBtn" onclick="fetchHuntingSeason()">
+          Search
+        </button>
 
+        <ul id="huntingSeasonAnimals"></ul>
+      </div>
 
+      <div class="aBZ">
+        <h2>Animals by Zone</h2>
+        <select id="zone">
+          <option value="">--Select a place--</option>
+          <option value="mexico">mexico</option>
+          <option value="USA">USA</option>
+          <option value="canada">canada</option>
+          <option value="alaska">alaska</option>
+          <option value="north america">north america</option>
+        </select>
+        <button class="searchBtn" onclick="fetchHuntingZone()">Search</button>
+        <ul id="huntingZoneAnimals"></ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="#"
+        ><video autoplay src="./video/Hunting Nation - copia.mp4"></video
+      ></a>
+      <a href="#"><h3>huntingNation</h3></a>
+      <p>
+        Developed page by
+        <a href="https://github.com/omarchavez18" target="_blank"
+          >omarchavez18</a
+        >
+      </p>
+    </footer>
   </body>
-  </html>
-  
+</html>
