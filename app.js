@@ -1,3 +1,38 @@
+//clear ul container
+const clearUl = (parentID, ulID) => {
+  // seleccionando los elementos
+  const ul = document.getElementById(ulID);
+  const ulFather = document.getElementById(parentID);
+  //borrar ul
+  ulFather.removeChild(ul);
+  //Crear un ul nuevo con las propiedas que ya tenía el anterior
+  const newUl = document.createElement("ul");
+  newUl.id = ulID;
+  newUl.classList.add("priceAnimals");
+  // insertar el ul nuevo en el padre
+  ulFather.appendChild(newUl);
+};
+
+// clear error message
+//removeError() // 1 seleccionar el elemento error, 2 checar si existe 3 si existe borrarlo si no retornar
+const removeError = (parentID, errorID) => {
+  // seleccionar los elementos error
+  const error = document.getElementById(errorID);
+  const errorFather = document.getElementById(parentID);
+
+  //aqui checa si existe o no. si existe pasa a borrarlo , si no existe retorna
+  if (error === null) {
+    return;
+  }
+  // borrar div de error
+  errorFather.removeChild(error);
+  //Crear un div nuevo con las propiedas que ya tenía el anterior
+  const newDiv = document.createElement("div");
+  newDiv.id = errorID;
+  // insertar el div nuevo en el padre
+  errorFather.appendChild(newDiv);
+};
+
 const showAnimals = (animal, id) => {
   /*this is the way to create a card for the info in html by js */
   let animalName = animal.name;
@@ -11,6 +46,19 @@ const showAnimals = (animal, id) => {
 
   let animalsResult = document.getElementById(id);
   animalsResult.appendChild(listItem);
+};
+
+const showError = (id) => {
+  // ESTO EVITA QUE SE DUPLIQUE EL MENSAJE DEL ERROR
+  if (document.querySelector(`#${id}`).firstChild != null) {
+    return;
+  }
+  let text = "SELECT AN OPTION";
+  let textItem = document.createElement("P");
+  textItem.classList.add("errorAlert");
+  textItem.innerText = text;
+  let mistake = document.getElementById(id);
+  mistake.appendChild(textItem);
 };
 
 // 1) endpoint - animals by name
@@ -61,9 +109,19 @@ const fetchHuntingKind = () => {
   fetch(url)
     .then((res) => res.json())
     .then((animals) => {
+      removeError("fatherKind", "errorKind");
+
+      clearUl("fatherKind", "huntingKindAnimals");
       //animals available by hunting kind
       animals.forEach((animal) => showAnimals(animal, "huntingKindAnimals"));
+    })
+
+    .catch((err) => {
+      clearUl("fatherKind", "huntingKindAnimals");
+      showError("errorKind");
     });
+
+  //
 };
 
 // 2) endpoint - animals by price
@@ -74,7 +132,14 @@ const fetchHuntingPrice = () => {
   fetch(url)
     .then((res) => res.json())
     .then((animals) => {
+      removeError("fatherPrice", "errorPrice");
+
+      clearUl("fatherPrice", "availableAnimals");
       animals.forEach((animal) => showAnimals(animal, "availableAnimals"));
+    })
+    .catch((err) => {
+      clearUl("fatherPrice", "availableAnimals");
+      showError("errorPrice");
     });
 };
 
@@ -88,6 +153,9 @@ const fetchHuntingType = () => {
     .then((info) => {
       let animalsByType = document.getElementById("huntingTypeAnimals");
       animalsByType.innerHTML = `Animals available by type: ${info}`;
+    })
+    .catch((err) => {
+      console.log(err);
     });
 };
 
@@ -102,6 +170,9 @@ const fetchHuntingSeason = () => {
     .then((data) => {
       let animalsBySeason = document.getElementById("huntingSeasonAnimals");
       animalsBySeason.innerHTML = `Animals available by Season: ${data}`;
+    })
+    .catch((err) => {
+      console.log(err);
     });
 };
 
@@ -115,6 +186,9 @@ const fetchHuntingZone = () => {
     .then((data) => {
       const animalsByZone = document.getElementById("huntingZoneAnimals");
       animalsByZone.innerHTML = `Animals available by zone: ${data}`;
+    })
+    .catch((err) => {
+      console.log(err);
     });
 };
 
