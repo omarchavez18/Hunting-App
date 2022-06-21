@@ -2,6 +2,9 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: small;
 }
+ul {
+  padding-left: 0;
+}
 
 .image {
   transform: scale(1);
@@ -147,7 +150,7 @@ a:hover {
   }
 }
 .w-100 {
-  width: 40rem !important;
+  width: 44rem !important;
   height: 27rem;
 }
 
@@ -215,6 +218,7 @@ a:hover {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
+  width: 99%;
 }
 
 //this is to increase the size of the picture when you use hover
@@ -365,7 +369,8 @@ a:hover {
   }
   .aBNP {
     display: none;
-    transition: all 2000ms;
+    transition: display 3s;
+    transition-timing-function: ease-in-out;
   }
   #search {
     margin-bottom: 2rem;
@@ -397,6 +402,20 @@ a:hover {
     width: 11.9rem;
     height: 11rem;
   }
+}
+
+.errorAlert {
+  color: black;
+  background-color: red;
+  width: 21rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 1rem;
+  font-size: 1rem;
+  box-shadow: 10px 7px 7px rgb(0, 0, 0);
 }
 
 .lastInfo {
@@ -433,7 +452,7 @@ footer {
 }
 
 // cellphone size
-@media (max-width: 480px) {
+@media (max-width: 375px) {
   .headerContent {
     display: flex;
     flex-direction: column;
@@ -460,7 +479,7 @@ footer {
   }
 
   .video {
-    min-height: 16rem !important;
+    min-height: 13rem !important;
   }
 
   .overlayVideo {
@@ -476,6 +495,7 @@ footer {
     }
     p {
       font-size: 1.2rem;
+      margin: 0;
     }
   }
 
@@ -492,34 +512,39 @@ footer {
   .textAndCarousel {
     display: flex;
     flex-direction: column;
-    width: 29rem;
+    width: 22rem;
     margin: 0.5rem !important;
 
     .textSection {
-      width: 95% !important;
+      width: 98% !important;
     }
   }
   .carousel-inner {
-    width: 26rem !important;
+    width: 21rem !important;
   }
 
   .funFact1 {
     display: flex;
     flex-direction: column;
-    width: 29.5rem;
+    width: 21.5rem;
+
+    .image1 {
+      width: 102.5% !important;
+    }
   }
   .funFactInfo1 {
-    width: 95% !important;
+    width: 100% !important;
   }
   #gallery {
     margin: 0.5rem;
   }
   .galleryImages {
     grid-template-columns: repeat(2, 1fr) !important;
+    width: 98%;
   }
   .galleryPhotos {
-    width: 206px;
-    height: 206px;
+    width: 177px;
+    height: 177px;
   }
   .size {
     width: 50%;
@@ -533,16 +558,16 @@ footer {
     width: 99% !important;
   }
   .w-100 {
-    width: 28rem !important;
-    height: 19rem;
+    width: 21rem !important;
+    height: 14rem;
   }
 
   .about {
-    width: 25rem !important;
+    width: 21rem !important;
   }
 
   .oneCard {
-    width: 21rem;
+    width: 15rem;
     margin-left: 5rem !important;
   }
   .priceAnimals {

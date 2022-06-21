@@ -3,6 +3,10 @@ body {
   font-size: small;
 }
 
+ul {
+  padding-left: 0;
+}
+
 .image {
   -webkit-transform: scale(1);
           transform: scale(1);
@@ -188,7 +192,7 @@ a:hover {
 }
 
 .w-100 {
-  width: 40rem !important;
+  width: 44rem !important;
   height: 27rem;
 }
 
@@ -268,6 +272,7 @@ a:hover {
   gap: 1rem;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
+  width: 99%;
 }
 
 .galleryImages > picture {
@@ -427,8 +432,10 @@ a:hover {
 
 .animalsByName .aBNP {
   display: none;
-  -webkit-transition: all 2000ms;
-  transition: all 2000ms;
+  -webkit-transition: display 3s;
+  transition: display 3s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .animalsByName #search {
@@ -472,6 +479,27 @@ a:hover {
   height: 11rem;
 }
 
+.errorAlert {
+  color: black;
+  background-color: red;
+  width: 21rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-top: 1rem;
+  font-size: 1rem;
+  -webkit-box-shadow: 10px 7px 7px black;
+          box-shadow: 10px 7px 7px black;
+}
+
 .lastInfo {
   margin: 3rem 0;
   display: -ms-grid;
@@ -513,7 +541,7 @@ footer video {
   width: 10rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 375px) {
   .headerContent {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -558,7 +586,7 @@ footer video {
     padding-bottom: 1rem;
   }
   .video {
-    min-height: 16rem !important;
+    min-height: 13rem !important;
   }
   .overlayVideo {
     width: 100%;
@@ -573,6 +601,7 @@ footer video {
   }
   .container-video p {
     font-size: 1.2rem;
+    margin: 0;
   }
   .imageContainer img {
     padding-top: 1rem;
@@ -589,14 +618,14 @@ footer video {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 29rem;
+    width: 22rem;
     margin: 0.5rem !important;
   }
   .textAndCarousel .textSection {
-    width: 95% !important;
+    width: 98% !important;
   }
   .carousel-inner {
-    width: 26rem !important;
+    width: 21rem !important;
   }
   .funFact1 {
     display: -webkit-box;
@@ -606,10 +635,13 @@ footer video {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 29.5rem;
+    width: 21.5rem;
+  }
+  .funFact1 .image1 {
+    width: 102.5% !important;
   }
   .funFactInfo1 {
-    width: 95% !important;
+    width: 100% !important;
   }
   #gallery {
     margin: 0.5rem;
@@ -617,10 +649,11 @@ footer video {
   .galleryImages {
     -ms-grid-columns: (1fr)[2] !important;
         grid-template-columns: repeat(2, 1fr) !important;
+    width: 98%;
   }
   .galleryPhotos {
-    width: 206px;
-    height: 206px;
+    width: 177px;
+    height: 177px;
   }
   .size {
     width: 50%;
@@ -633,14 +666,14 @@ footer video {
     width: 99% !important;
   }
   .w-100 {
-    width: 28rem !important;
-    height: 19rem;
+    width: 21rem !important;
+    height: 14rem;
   }
   .about {
-    width: 25rem !important;
+    width: 21rem !important;
   }
   .oneCard {
-    width: 21rem;
+    width: 15rem;
     margin-left: 5rem !important;
   }
   .priceAnimals {
