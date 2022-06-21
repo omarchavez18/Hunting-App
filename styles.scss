@@ -541,10 +541,13 @@ footer {
   .galleryImages {
     grid-template-columns: repeat(2, 1fr) !important;
     width: 98%;
+    margin: auto !important;
+    padding-left: 0 !important;
+    gap: 0.2rem;
   }
   .galleryPhotos {
-    width: 177px;
-    height: 177px;
+    width: 171px;
+    height: 171px;
   }
   .size {
     width: 50%;
