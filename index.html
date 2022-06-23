@@ -376,10 +376,11 @@
         <option value="Pecari">Pecari</option>
       </select>
       <button class="searchBtn" onclick="fetchHunting()">Search</button>
+      <div id="errorName"></div>
       <section class="sectionCard">
-        <div class="card oneCard">
+        <div id="divFatherName" class="card oneCard">
           <img id="image" src="" class="card-img-top" alt="..." />
-          <div class="card-body">
+          <div id="namesInfo" class="card-body">
             <p class="card-text aBNP" id="name"></p>
             <p class="card-text aBNP" id="kindOf"></p>
             <p class="card-text aBNP" id="seasonOf"></p>
@@ -394,6 +395,7 @@
       <div id="fatherPrice" style="margin-top: 3rem">
         <h2>Animals By Price</h2>
         <input
+          class="inputPrice"
           type="number"
           min="25"
           max="850"

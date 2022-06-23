@@ -13,6 +13,15 @@ const clearUl = (parentID, ulID) => {
   ulFather.appendChild(newUl);
 };
 
+const clearDiv = (parentID, divID) => {
+  const div = document.getElementById(divID);
+  const divFather = document.getElementById(parentID);
+  divFather.removeChild(div);
+  const newDiv = document.createElement("div");
+  newDiv.id = divID;
+  divFather.appendChild(newDiv);
+};
+
 // CLEAR ERROR MESSAGE
 //removeError() // 1 seleccionar el elemento error, 2 checar si existe 3 si existe borrarlo si no retornar
 const removeError = (parentID, errorID) => {
@@ -90,6 +99,10 @@ const fetchHunting = () => {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
+      removeError("divFatherName", "errorName");
+
+      clearDiv("divFatherName", "namesInfo");
+
       //image
       let elementImg = data[0].img;
       img(elementImg);
@@ -114,6 +127,8 @@ const fetchHunting = () => {
     })
     .catch((err) => {
       console.log(err);
+      clearDiv("divFatherName", "namesInfo");
+      showError("errorName");
     });
 
   //image
