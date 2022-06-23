@@ -436,13 +436,12 @@
           <option value="duck">duck</option>
         </select>
         <button class="searchBtn" onclick="fetchHuntingType()">Search</button>
-        <div id="errorType"></div>
-
+        <section id="errorType"></section>
         <ul id="huntingTypeAnimals"></ul>
       </div>
 
       <!-- ANIMALS BY SEASON -->
-      <div>
+      <div id="fatherSeason">
         <h2>Animals by Season</h2>
         <select id="season">
           <option value="">--Select a Month--</option>
@@ -462,12 +461,12 @@
         <button type="button" class="searchBtn" onclick="fetchHuntingSeason()">
           Search
         </button>
-
+        <section id="errorSeason"></section>
         <ul id="huntingSeasonAnimals"></ul>
       </div>
 
       <!-- ANIMALS BY ZONE -->
-      <div class="aBZ">
+      <div id="fatherZone" class="aBZ">
         <h2>Animals by Zone</h2>
         <select id="zone">
           <option value="">--Select a place--</option>
@@ -478,6 +477,7 @@
           <option value="north america">north america</option>
         </select>
         <button class="searchBtn" onclick="fetchHuntingZone()">Search</button>
+        <section id="errorZone"></section>
         <ul id="huntingZoneAnimals"></ul>
       </div>
     </section>
