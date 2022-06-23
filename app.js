@@ -151,11 +151,15 @@ const fetchHuntingType = () => {
   fetch(url)
     .then((res) => res.json())
     .then((info) => {
+      removeError("fatherType", "errorType");
+      clearUl("fatherType", "huntingTypeAnimals");
       let animalsByType = document.getElementById("huntingTypeAnimals");
       animalsByType.innerHTML = `Animals available by type: ${info}`;
     })
     .catch((err) => {
       console.log(err);
+      clearUl("fatherType", "huntingTypeAnimals");
+      showError("errorType");
     });
 };
 

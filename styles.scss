@@ -540,14 +540,14 @@ footer {
   }
   .galleryImages {
     grid-template-columns: repeat(2, 1fr) !important;
-    width: 98%;
+    width: 90%;
     margin: auto !important;
     padding-left: 0 !important;
     gap: 0.2rem;
   }
   .galleryPhotos {
-    width: 171px;
-    height: 171px;
+    width: 166px;
+    height: 166px;
   }
   .size {
     width: 50%;
@@ -567,6 +567,13 @@ footer {
 
   .about {
     width: 21rem !important;
+    p {
+      padding: 0.8rem;
+    }
+    img {
+      width: 10rem;
+      margin-bottom: 1.2rem;
+    }
   }
 
   .oneCard {

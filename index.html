@@ -406,6 +406,8 @@
         <div id="errorPrice"></div>
         <ul id="availableAnimals" class="priceAnimals"></ul>
       </div>
+
+      <!-- ANIMALS BY KIND -->
       <div id="fatherKind">
         <h2>Animals by Hunting Kind</h2>
         <select id="kind">
@@ -419,8 +421,9 @@
       </div>
     </div>
 
+    <!-- ANIMALS BY TYPE -->
     <section class="lastInfo">
-      <div>
+      <div id="fatherType">
         <h2>Animals by Type</h2>
         <select id="type">
           <option value="">--Select a type--</option>
@@ -432,12 +435,13 @@
           <option value="rabbit">rabbit</option>
           <option value="duck">duck</option>
         </select>
-
         <button class="searchBtn" onclick="fetchHuntingType()">Search</button>
+        <div id="errorType"></div>
 
         <ul id="huntingTypeAnimals"></ul>
       </div>
 
+      <!-- ANIMALS BY SEASON -->
       <div>
         <h2>Animals by Season</h2>
         <select id="season">
@@ -462,6 +466,7 @@
         <ul id="huntingSeasonAnimals"></ul>
       </div>
 
+      <!-- ANIMALS BY ZONE -->
       <div class="aBZ">
         <h2>Animals by Zone</h2>
         <select id="zone">
