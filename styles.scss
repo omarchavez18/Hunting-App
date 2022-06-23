@@ -5,6 +5,9 @@ body {
     border-radius: 5px;
   }
 }
+#animalPrice {
+  width: 15rem;
+}
 ul {
   padding-left: 0;
 }
@@ -154,7 +157,7 @@ a:hover {
   }
 }
 .w-100 {
-  width: 44rem !important;
+  width: 44rem;
   height: 27rem;
   border-radius: 5px;
 }
@@ -375,18 +378,11 @@ a:hover {
     border-radius: 5px;
   }
   .aBNP {
-    display: none;
     transition: display 3s;
     transition-timing-function: ease-in-out;
   }
   #search {
     margin-bottom: 2rem;
-  }
-
-  .card {
-    &:hover p {
-      display: block;
-    }
   }
 }
 
@@ -487,8 +483,8 @@ footer {
     padding-bottom: 1rem;
   }
 
-  .video {
-    min-height: 13rem !important;
+  .video.video {
+    min-height: 13rem;
   }
 
   .overlayVideo {
@@ -518,18 +514,18 @@ footer {
     }
   }
 
-  .textAndCarousel {
+  .textAndCarousel.textAndCarousel {
     display: flex;
     flex-direction: column;
     width: 22rem;
-    margin: 0.5rem !important;
+    margin: 0.5rem;
 
     .textSection {
-      width: 98% !important;
+      width: 98%;
     }
   }
-  .carousel-inner {
-    width: 21rem !important;
+  .carousel-inner.carousel-inner {
+    width: 21rem;
   }
 
   .funFact1 {
@@ -537,21 +533,21 @@ footer {
     flex-direction: column;
     width: 21.5rem;
 
-    .image1 {
-      width: 102.5% !important;
+    .image1.image1 {
+      width: 102.5%;
     }
   }
-  .funFactInfo1 {
-    width: 100% !important;
+  .funFactInfo1.funFactInfo1 {
+    width: 100%;
   }
   #gallery {
     margin: 0.5rem;
   }
-  .galleryImages {
-    grid-template-columns: repeat(2, 1fr) !important;
+  .galleryImages.galleryImages {
+    grid-template-columns: repeat(2, 1fr);
     width: 90%;
-    margin: auto !important;
-    padding-left: 0 !important;
+    margin: auto;
+    padding-left: 0;
     gap: 0.2rem;
   }
   .galleryPhotos {
@@ -566,16 +562,16 @@ footer {
     width: 22rem;
     height: auto;
   }
-  .w-50 {
-    width: 99% !important;
+  .w-50.w-50 {
+    width: 99%;
   }
   .w-100 {
-    width: 21rem !important;
+    width: 100%;
     height: 14rem;
   }
 
-  .about {
-    width: 21rem !important;
+  .about.about {
+    width: 21rem;
     p {
       padding: 0.8rem;
     }
@@ -585,9 +581,9 @@ footer {
     }
   }
 
-  .oneCard {
+  .oneCard.oneCard {
     width: 15rem;
-    margin-left: 5rem !important;
+    margin-left: 5rem;
   }
   .priceAnimals {
     padding: 0;
