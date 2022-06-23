@@ -3,6 +3,10 @@ body {
   font-size: small;
 }
 
+body img {
+  border-radius: 5px;
+}
+
 ul {
   padding-left: 0;
 }
@@ -125,6 +129,7 @@ a:hover {
   font-weight: 700;
   font-size: 2.4rem;
   margin: 2rem 0;
+  border-radius: 5px;
 }
 
 .imageContainer {
@@ -194,6 +199,7 @@ a:hover {
 .w-100 {
   width: 44rem !important;
   height: 27rem;
+  border-radius: 5px;
 }
 
 .funFact1 {
@@ -345,6 +351,7 @@ a:hover {
   border: solid black 3px;
   width: 50rem;
   margin: auto;
+  border-radius: 5px;
   position: relative;
   -webkit-animation-name: mymove;
           animation-name: mymove;
@@ -428,6 +435,7 @@ a:hover {
   color: white;
   margin-bottom: 2rem;
   margin: 0.5rem;
+  border-radius: 5px;
 }
 
 .animalsByName .aBNP {
@@ -472,6 +480,7 @@ a:hover {
   width: 12rem;
   -webkit-box-shadow: 11px 5px 10px black;
           box-shadow: 11px 5px 10px black;
+  border-radius: 5px;
 }
 
 .priceAnimals img {
@@ -482,7 +491,7 @@ a:hover {
 .errorAlert {
   color: black;
   background-color: red;
-  width: 21rem;
+  width: 16rem;
   height: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -498,6 +507,7 @@ a:hover {
   font-size: 1rem;
   -webkit-box-shadow: 10px 7px 7px black;
           box-shadow: 10px 7px 7px black;
+  border-radius: 9px;
 }
 
 .lastInfo {
