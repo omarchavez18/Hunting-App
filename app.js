@@ -24,7 +24,7 @@ const clearDiv = (parentID, divID) => {
 
 // CLEAR ERROR MESSAGE
 //removeError() // 1 seleccionar el elemento error, 2 checar si existe 3 si existe borrarlo si no retornar
-const removeError = (parentID, errorID) => {
+const removeError = (parentID, errorID, tag) => {
   // seleccionar los elementos error
   const error = document.getElementById(errorID);
   const errorFather = document.getElementById(parentID);
@@ -36,30 +36,11 @@ const removeError = (parentID, errorID) => {
   // borrar div de error
   errorFather.removeChild(error);
   //Crear un div nuevo con las propiedas que ya tenía el anterior
-  const newDiv = document.createElement("div");
+  // en el parametro tag indicamos que etiqueta crearemos ejemplo div, section etc
+  const newDiv = document.createElement(tag);
   newDiv.id = errorID;
   // insertar el div nuevo en el padre
   errorFather.appendChild(newDiv);
-};
-
-//  CLEAR ERROR MESSAGE FOR ANIMALS BY TYPE, SEASON AND ZONE
-//removeError() // 1 seleccionar el elemento error, 2 checar si existe 3 si existe borrarlo si no retornar
-const removeError2 = (parentID, errorID) => {
-  // seleccionar los elementos error
-  const error = document.getElementById(errorID);
-  const errorFather = document.getElementById(parentID);
-
-  //aqui checa si existe o no. si existe pasa a borrarlo , si no existe retorna
-  if (error === null) {
-    return;
-  }
-  // borrar section de error
-  errorFather.removeChild(error);
-  //Crear un div nuevo con las propiedas que ya tenía el anterior
-  const newSection = document.createElement("section");
-  newSection.id = errorID;
-  // insertar el div nuevo en el padre
-  errorFather.appendChild(newSection);
 };
 
 //FUNCTION TO CREATE A CARD FOR THE INFO IN HTML
@@ -146,7 +127,7 @@ const fetchHuntingKind = () => {
   fetch(url)
     .then((res) => res.json())
     .then((animals) => {
-      removeError("fatherKind", "errorKind");
+      removeError("fatherKind", "errorKind", "div");
 
       clearUl("fatherKind", "huntingKindAnimals");
       //animals available by hunting kind
@@ -169,7 +150,7 @@ const fetchHuntingPrice = () => {
   fetch(url)
     .then((res) => res.json())
     .then((animals) => {
-      removeError("fatherPrice", "errorPrice");
+      removeError("fatherPrice", "errorPrice", "div");
 
       clearUl("fatherPrice", "availableAnimals");
       animals.forEach((animal) => showAnimals(animal, "availableAnimals"));
@@ -188,7 +169,7 @@ const fetchHuntingType = () => {
   fetch(url)
     .then((res) => res.json())
     .then((info) => {
-      removeError2("fatherType", "errorType");
+      removeError("fatherType", "errorType", "section");
 
       clearUl("fatherType", "huntingTypeAnimals");
       let animalsByType = document.getElementById("huntingTypeAnimals");
@@ -210,7 +191,7 @@ const fetchHuntingSeason = () => {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      removeError2("fatherSeason", "errorSeason");
+      removeError("fatherSeason", "errorSeason", "section");
 
       clearUl("fatherSeason", "huntingSeasonAnimals");
       let animalsBySeason = document.getElementById("huntingSeasonAnimals");
@@ -231,7 +212,7 @@ const fetchHuntingZone = () => {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      removeError2("fatherZone", "errorZone");
+      removeError("fatherZone", "errorZone", "section");
 
       clearUl("fatherZone", "huntingZoneAnimals");
       const animalsByZone = document.getElementById("huntingZoneAnimals");
