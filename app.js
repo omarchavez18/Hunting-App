@@ -1,15 +1,15 @@
 //CLEAR UL CONTAINER
 const clearUl = (parentID, ulID) => {
-  // seleccionando los elementos
+  // selected all the elements
   const ul = document.getElementById(ulID);
   const ulFather = document.getElementById(parentID);
-  //borrar ul
+  //delete ul
   ulFather.removeChild(ul);
-  //Crear un ul nuevo con las propiedas que ya tenía el anterior
+  // create a new ul with the properties that the last one already had
   const newUl = document.createElement("ul");
   newUl.id = ulID;
   newUl.classList.add("priceAnimals");
-  // insertar el ul nuevo en el padre
+  // insert new ul in parent
   ulFather.appendChild(newUl);
 };
 
@@ -23,23 +23,23 @@ const clearDiv = (parentID, divID) => {
 };
 
 // CLEAR ERROR MESSAGE
-//removeError() // 1 seleccionar el elemento error, 2 checar si existe 3 si existe borrarlo si no retornar
+//removeError() // 1 select the error element, 2 check if it exists 3 if it exists delete it if not return
 const removeError = (parentID, errorID, tag) => {
-  // seleccionar los elementos error
+  // select the error elements
   const error = document.getElementById(errorID);
   const errorFather = document.getElementById(parentID);
 
-  //aqui checa si existe o no. si existe pasa a borrarlo , si no existe retorna
+  //  here you check if exists or not, if exists delete it, if not return
   if (error === null) {
     return;
   }
-  // borrar div de error
+  //  delete error´s div
   errorFather.removeChild(error);
-  //Crear un div nuevo con las propiedas que ya tenía el anterior
-  // en el parametro tag indicamos que etiqueta crearemos ejemplo div, section etc
+  //Create a new div with the properties that the previous one already had
+  // in the tag parameter we indicate which tag we will create example div, section etc
   const newDiv = document.createElement(tag);
   newDiv.id = errorID;
-  // insertar el div nuevo en el padre
+  // insert the new div in the parent
   errorFather.appendChild(newDiv);
 };
 
@@ -61,7 +61,7 @@ const showAnimals = (animal, id) => {
 
 //FUNCTION TO SHOW ERROR IN THE APP FOR SEARCH
 const showError = (id) => {
-  // ESTO EVITA QUE SE DUPLIQUE EL MENSAJE DEL ERROR
+  // THIS PREVENTS THE ERROR MESSAGE FROM BEING DUPLICATED
   if (document.querySelector(`#${id}`).firstChild != null) {
     return;
   }
@@ -286,7 +286,7 @@ function showImage(imageNumber) {
   closeModalBotton.textContent = "X";
   closeModalBotton.classList.add("close-btn");
 
-  // accion de dar click para cerrar.
+  //click-to-close action.
   closeModalBotton.onclick = function () {
     const body = document.querySelector("body");
     body.classList.remove("fijar-body"); // quita el no poder dar scroll una vez cerrada la imagen
@@ -295,7 +295,7 @@ function showImage(imageNumber) {
 
   overlay.appendChild(closeModalBotton);
 
-  //añadirlo al html
+  //add to html
   const body = document.querySelector("body");
   body.appendChild(overlay);
   body.classList.add("fijar-body");
