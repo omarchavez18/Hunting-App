@@ -111,13 +111,15 @@ const fetchHunting = () => {
       clearDiv("divFatherName", "namesInfo");
       showError("errorName");
     });
-
   //image
   const img = (url) => {
     const elementImg = document.getElementById("image");
     elementImg.src = url;
   };
 };
+const searchBtnName = document
+  .getElementById("searchBtnName")
+  .addEventListener("click", fetchHunting);
 
 // 3) endpoint - animals by huntingkind
 
@@ -133,19 +135,19 @@ const fetchHuntingKind = () => {
       //animals available by hunting kind
       animals.forEach((animal) => showAnimals(animal, "huntingKindAnimals"));
     })
-
     .catch((err) => {
       clearUl("fatherKind", "huntingKindAnimals");
       showError("errorKind");
     });
-
-  //
 };
+// the function that you want to call must be declared first before called
+const searchBtnKind = document
+  .getElementById("searchBtnKind")
+  .addEventListener("click", fetchHuntingKind);
 
 // 2) endpoint - animals by price
 const fetchHuntingPrice = () => {
   const price = document.getElementById("animalPrice").value;
-
   const url = `https://hunting-app-for-hunters.herokuapp.com/animals/price/${price}`;
   fetch(url)
     .then((res) => res.json())
@@ -160,6 +162,9 @@ const fetchHuntingPrice = () => {
       showError("errorPrice");
     });
 };
+const searchBtnPrice = document
+  .getElementById("searchBtnPrice")
+  .addEventListener("click", fetchHuntingPrice);
 
 //4) endpoint - animals by type
 const fetchHuntingType = () => {
@@ -181,9 +186,11 @@ const fetchHuntingType = () => {
       showError("errorType");
     });
 };
+const searchBtnType = document
+  .getElementById("searchBtnType")
+  .addEventListener("click", fetchHuntingType);
 
 // 5) endpoint - animal by season
-
 const fetchHuntingSeason = () => {
   const season = document.getElementById("season").value;
 
@@ -203,6 +210,9 @@ const fetchHuntingSeason = () => {
       showError("errorSeason");
     });
 };
+const searchBtnSeason = document
+  .getElementById("searchBtnSeason")
+  .addEventListener("click", fetchHuntingSeason);
 
 // 6) endpoint - animals by zone
 const fetchHuntingZone = () => {
@@ -224,6 +234,9 @@ const fetchHuntingZone = () => {
       showError("errorZone");
     });
 };
+const searchBtnZone = document
+  .getElementById("searchBtnZone")
+  .addEventListener("click", fetchHuntingZone);
 
 //GALLERY
 
