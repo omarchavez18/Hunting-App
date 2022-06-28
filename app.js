@@ -1,33 +1,24 @@
-//CLEAR UL CONTAINER
-const clearUl = (parentID, ulID) => {
+//CLEAR  CONTAINER COULD BE UL OR DIV OR SECTION
+const clearContainer = (parentID, ulID, tag, clas) => {
   // selected all the elements
   const ul = document.getElementById(ulID);
   const ulFather = document.getElementById(parentID);
   //delete ul
   ulFather.removeChild(ul);
   // create a new ul with the properties that the last one already had
-  const newUl = document.createElement("ul");
+  const newUl = document.createElement(tag);
   newUl.id = ulID;
-  newUl.classList.add("priceAnimals");
+  newUl.classList.add(clas);
   // insert new ul in parent
   ulFather.appendChild(newUl);
-};
-
-const clearDiv = (parentID, divID) => {
-  const div = document.getElementById(divID);
-  const divFather = document.getElementById(parentID);
-  divFather.removeChild(div);
-  const newDiv = document.createElement("div");
-  newDiv.id = divID;
-  divFather.appendChild(newDiv);
 };
 
 // CLEAR ERROR MESSAGE
 //removeError() // 1 select the error element, 2 check if it exists 3 if it exists delete it if not return
 const removeError = (parentID, errorID, tag) => {
   // select the error elements
-  const error = document.getElementById(errorID);
   const errorFather = document.getElementById(parentID);
+  const error = document.getElementById(errorID);
 
   //  here you check if exists or not, if exists delete it, if not return
   if (error === null) {
@@ -80,9 +71,8 @@ const fetchHunting = () => {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      removeError("divFatherName", "errorName");
-
-      clearDiv("divFatherName", "namesInfo");
+      removeError("divFatherName", "errorName", "div");
+      clearContainer("divFatherName", "namesInfo", "div", "card-body");
 
       //image
       let elementImg = data[0].img;
@@ -108,7 +98,7 @@ const fetchHunting = () => {
     })
     .catch((err) => {
       console.log(err);
-      clearDiv("divFatherName", "namesInfo");
+      clearContainer("divFatherName", "namesInfo", "div", "card-body");
       showError("errorName");
     });
   //image
@@ -131,12 +121,12 @@ const fetchHuntingKind = () => {
     .then((animals) => {
       removeError("fatherKind", "errorKind", "div");
 
-      clearUl("fatherKind", "huntingKindAnimals");
+      clearContainer("fatherKind", "huntingKindAnimals", "ul", "priceAnimals");
       //animals available by hunting kind
       animals.forEach((animal) => showAnimals(animal, "huntingKindAnimals"));
     })
     .catch((err) => {
-      clearUl("fatherKind", "huntingKindAnimals");
+      clearContainer("fatherKind", "huntingKindAnimals", "ul", "priceAnimals");
       showError("errorKind");
     });
 };
@@ -154,11 +144,11 @@ const fetchHuntingPrice = () => {
     .then((animals) => {
       removeError("fatherPrice", "errorPrice", "div");
 
-      clearUl("fatherPrice", "availableAnimals");
+      clearContainer("fatherPrice", "availableAnimals", "ul", "priceAnimals");
       animals.forEach((animal) => showAnimals(animal, "availableAnimals"));
     })
     .catch((err) => {
-      clearUl("fatherPrice", "availableAnimals");
+      clearContainer("fatherPrice", "availableAnimals", "ul", "priceAnimals");
       showError("errorPrice");
     });
 };
@@ -176,13 +166,13 @@ const fetchHuntingType = () => {
     .then((info) => {
       removeError("fatherType", "errorType", "section");
 
-      clearUl("fatherType", "huntingTypeAnimals");
+      clearContainer("fatherType", "huntingTypeAnimals", "ul", "priceAnimals");
       let animalsByType = document.getElementById("huntingTypeAnimals");
       animalsByType.innerHTML = `Animals available by type: ${info}`;
     })
     .catch((err) => {
       console.log(err);
-      clearUl("fatherType", "huntingTypeAnimals");
+      clearContainer("fatherType", "huntingTypeAnimals", "ul", "priceAnimals");
       showError("errorType");
     });
 };
@@ -200,13 +190,23 @@ const fetchHuntingSeason = () => {
     .then((data) => {
       removeError("fatherSeason", "errorSeason", "section");
 
-      clearUl("fatherSeason", "huntingSeasonAnimals");
+      clearContainer(
+        "fatherSeason",
+        "huntingSeasonAnimals",
+        "ul",
+        "priceAnimals"
+      );
       let animalsBySeason = document.getElementById("huntingSeasonAnimals");
       animalsBySeason.innerHTML = `Animals available by Season: ${data}`;
     })
     .catch((err) => {
       console.log(err);
-      clearUl("fatherSeason", "huntingSeasonAnimals");
+      clearContainer(
+        "fatherSeason",
+        "huntingSeasonAnimals",
+        "ul",
+        "priceAnimals"
+      );
       showError("errorSeason");
     });
 };
@@ -224,13 +224,13 @@ const fetchHuntingZone = () => {
     .then((data) => {
       removeError("fatherZone", "errorZone", "section");
 
-      clearUl("fatherZone", "huntingZoneAnimals");
+      clearContainer("fatherZone", "huntingZoneAnimals", "ul", "priceAnimals");
       const animalsByZone = document.getElementById("huntingZoneAnimals");
       animalsByZone.innerHTML = `Animals available by zone: ${data}`;
     })
     .catch((err) => {
       console.log(err);
-      clearUl("fatherZone", "huntingZoneAnimals");
+      clearContainer("fatherZone", "huntingZoneAnimals", "ul", "priceAnimals");
       showError("errorZone");
     });
 };
