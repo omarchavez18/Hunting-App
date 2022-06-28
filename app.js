@@ -50,6 +50,56 @@ const showAnimals = (animal, id) => {
   animalsResult.appendChild(listItem);
 };
 
+const showAnimalsByName = (animal, id) => {
+  /*this is the way to create a card for the info in html by js */
+
+  //img
+  let animalImg = animal.img;
+  let listItem = document.createElement("LI");
+  let imgItem = document.createElement("img");
+  imgItem.src = animalImg;
+  listItem.appendChild(imgItem);
+
+  //name
+  let animalName = animal.name;
+  let listItem1 = document.createElement("li");
+  listItem1.innerText = `Name: ${animalName}`;
+  listItem.appendChild(listItem1);
+
+  //type
+  let animalType = animal.type;
+  let listItem2 = document.createElement("li");
+  listItem2.innerText = `Type: ${animalType}`;
+  listItem.appendChild(listItem2);
+
+  //price
+  let animalPrice = animal.usdPrice;
+  let listItem3 = document.createElement("li");
+  listItem3.innerText = `Price: ${animalPrice}`;
+  listItem.appendChild(listItem3);
+
+  //kind
+  let animalKind = animal.huntingkind;
+  let listItem4 = document.createElement("li");
+  listItem4.innerText = `Hunting Kind: ${animalKind}`;
+  listItem.appendChild(listItem4);
+
+  //season
+  let animalSeason = animal.season;
+  let listItem5 = document.createElement("li");
+  listItem5.innerText = `Season: ${animalSeason}`;
+  listItem.appendChild(listItem5);
+
+  //zone
+  let animalZone = animal.zone;
+  let listItem6 = document.createElement("li");
+  listItem6.innerText = `Zone: ${animalZone}`;
+  listItem.appendChild(listItem6);
+
+  let animalsResult = document.getElementById(id);
+  animalsResult.appendChild(listItem);
+};
+
 //FUNCTION TO SHOW ERROR IN THE APP FOR SEARCH
 const showError = (id) => {
   // THIS PREVENTS THE ERROR MESSAGE FROM BEING DUPLICATED
@@ -70,35 +120,15 @@ const fetchHunting = () => {
   const url = `https://hunting-app-for-hunters.herokuapp.com/animals/name/${search}`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => {
+    .then((animals) => {
       removeError("divFatherName", "errorName", "div");
-      clearContainer("divFatherName", "namesInfo", "div", "card-body");
+      clearContainer("divFatherName", "namess", "div", "card-body");
 
-      //image
-      let elementImg = data[0].img;
-      img(elementImg);
-      //name
-      let elementName = document.getElementById("name");
-      elementName.innerHTML = `Name: ${data[0].name}`;
-      // huntingkind
-      let elementKind = document.getElementById("kindOf");
-      elementKind.innerHTML = `HuntingKind: ${data[0].huntingkind}`;
-      // season
-      let elementSeason = document.getElementById("seasonOf");
-      elementSeason.innerHTML = `Season: ${data[0].season}`;
-      // type
-      let elementType = document.getElementById("typeOf");
-      elementType.innerHTML = `Type: ${data[0].type}`;
-      // Price
-      let elementPrice = document.getElementById("price");
-      elementPrice.innerHTML = `USD-Price: ${data[0].usdPrice}`;
-      // zone
-      let elementZone = document.getElementById("zoneOf");
-      elementZone.innerHTML = `Zone: ${data[0].zone}`;
+      animals.forEach((animal) => showAnimalsByName(animal, "namess"));
     })
     .catch((err) => {
       console.log(err);
-      clearContainer("divFatherName", "namesInfo", "div", "card-body");
+      clearContainer("divFatherName", "namess", "div", "card-body");
       showError("errorName");
     });
   //image
