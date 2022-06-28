@@ -200,6 +200,10 @@ a:hover {
   color: #b13d08;
 }
 
+.carousel-inner {
+  border-radius: 5px;
+}
+
 .w-100 {
   width: 44rem;
   height: 27rem;
