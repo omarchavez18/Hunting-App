@@ -1,6 +1,12 @@
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: small;
+  img {
+    border-radius: 5px;
+  }
+}
+#animalPrice {
+  width: 15rem;
 }
 ul {
   padding-left: 0;
@@ -94,6 +100,7 @@ a:hover {
     font-weight: 700;
     font-size: 2.4rem;
     margin: 2rem 0;
+    border-radius: 5px;
   }
 }
 
@@ -149,9 +156,13 @@ a:hover {
     }
   }
 }
+.carousel-inner {
+  border-radius: 5px;
+}
 .w-100 {
-  width: 44rem !important;
+  width: 44rem;
   height: 27rem;
+  border-radius: 5px;
 }
 
 .funFact1 {
@@ -248,9 +259,9 @@ a:hover {
   width: 100%;
   height: 100%;
   display: grid;
-  place-items: center; // centra la imagen
+  place-items: center; // center the image
 
-  // obscurece el exterior de la imagen para resaltar la imagen
+  //darkens the outside of the image to make the image stand out
   background-color: rgba(0, 0, 0, 0.596);
 
   picture {
@@ -290,6 +301,7 @@ a:hover {
   border: solid black 3px;
   width: 50rem;
   margin: auto;
+  border-radius: 5px;
   //animation
   position: relative;
   animation-name: mymove;
@@ -366,20 +378,14 @@ a:hover {
     color: white;
     margin-bottom: 2rem;
     margin: 0.5rem;
+    border-radius: 5px;
   }
   .aBNP {
-    display: none;
     transition: display 3s;
     transition-timing-function: ease-in-out;
   }
   #search {
     margin-bottom: 2rem;
-  }
-
-  .card {
-    &:hover p {
-      display: block;
-    }
   }
 }
 
@@ -397,6 +403,7 @@ a:hover {
     border: solid 1px black;
     width: 12rem;
     box-shadow: 11px 5px 10px black;
+    border-radius: 5px;
   }
   img {
     width: 11.9rem;
@@ -407,7 +414,7 @@ a:hover {
 .errorAlert {
   color: black;
   background-color: red;
-  width: 21rem;
+  width: 16rem;
   height: 2rem;
   display: flex;
   justify-content: center;
@@ -416,6 +423,7 @@ a:hover {
   margin-top: 1rem;
   font-size: 1rem;
   box-shadow: 10px 7px 7px rgb(0, 0, 0);
+  border-radius: 9px;
 }
 
 .lastInfo {
@@ -478,8 +486,8 @@ footer {
     padding-bottom: 1rem;
   }
 
-  .video {
-    min-height: 13rem !important;
+  .video.video {
+    min-height: 13rem;
   }
 
   .overlayVideo {
@@ -509,18 +517,18 @@ footer {
     }
   }
 
-  .textAndCarousel {
+  .textAndCarousel.textAndCarousel {
     display: flex;
     flex-direction: column;
     width: 22rem;
-    margin: 0.5rem !important;
+    margin: 0.5rem;
 
     .textSection {
-      width: 98% !important;
+      width: 98%;
     }
   }
-  .carousel-inner {
-    width: 21rem !important;
+  .carousel-inner.carousel-inner {
+    width: 21rem;
   }
 
   .funFact1 {
@@ -528,23 +536,26 @@ footer {
     flex-direction: column;
     width: 21.5rem;
 
-    .image1 {
-      width: 102.5% !important;
+    .image1.image1 {
+      width: 102.5%;
     }
   }
-  .funFactInfo1 {
-    width: 100% !important;
+  .funFactInfo1.funFactInfo1 {
+    width: 100%;
   }
   #gallery {
     margin: 0.5rem;
   }
-  .galleryImages {
-    grid-template-columns: repeat(2, 1fr) !important;
-    width: 98%;
+  .galleryImages.galleryImages {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: auto;
+    padding-left: 0;
+    gap: 0.2rem;
   }
   .galleryPhotos {
-    width: 177px;
-    height: 177px;
+    width: 166px;
+    height: 166px;
   }
   .size {
     width: 50%;
@@ -554,21 +565,28 @@ footer {
     width: 22rem;
     height: auto;
   }
-  .w-50 {
-    width: 99% !important;
+  .w-50.w-50 {
+    width: 99%;
   }
   .w-100 {
-    width: 21rem !important;
+    width: 100%;
     height: 14rem;
   }
 
-  .about {
-    width: 21rem !important;
+  .about.about {
+    width: 21rem;
+    p {
+      padding: 0.8rem;
+    }
+    img {
+      width: 10rem;
+      margin-bottom: 1.2rem;
+    }
   }
 
-  .oneCard {
+  .oneCard.oneCard {
     width: 15rem;
-    margin-left: 5rem !important;
+    margin-left: 5rem;
   }
   .priceAnimals {
     padding: 0;
@@ -653,5 +671,8 @@ footer {
 
   ul {
     padding-left: 0;
+  }
+  .errorAlert {
+    width: 11rem;
   }
 }

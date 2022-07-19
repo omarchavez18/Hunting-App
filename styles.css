@@ -3,6 +3,14 @@ body {
   font-size: small;
 }
 
+body img {
+  border-radius: 5px;
+}
+
+#animalPrice {
+  width: 15rem;
+}
+
 ul {
   padding-left: 0;
 }
@@ -125,6 +133,7 @@ a:hover {
   font-weight: 700;
   font-size: 2.4rem;
   margin: 2rem 0;
+  border-radius: 5px;
 }
 
 .imageContainer {
@@ -191,9 +200,14 @@ a:hover {
   color: #b13d08;
 }
 
+.carousel-inner {
+  border-radius: 5px;
+}
+
 .w-100 {
-  width: 44rem !important;
+  width: 44rem;
   height: 27rem;
+  border-radius: 5px;
 }
 
 .funFact1 {
@@ -345,6 +359,7 @@ a:hover {
   border: solid black 3px;
   width: 50rem;
   margin: auto;
+  border-radius: 5px;
   position: relative;
   -webkit-animation-name: mymove;
           animation-name: mymove;
@@ -428,10 +443,10 @@ a:hover {
   color: white;
   margin-bottom: 2rem;
   margin: 0.5rem;
+  border-radius: 5px;
 }
 
 .animalsByName .aBNP {
-  display: none;
   -webkit-transition: display 3s;
   transition: display 3s;
   -webkit-transition-timing-function: ease-in-out;
@@ -440,10 +455,6 @@ a:hover {
 
 .animalsByName #search {
   margin-bottom: 2rem;
-}
-
-.animalsByName .card:hover p {
-  display: block;
 }
 
 .priceAnimals {
@@ -472,6 +483,7 @@ a:hover {
   width: 12rem;
   -webkit-box-shadow: 11px 5px 10px black;
           box-shadow: 11px 5px 10px black;
+  border-radius: 5px;
 }
 
 .priceAnimals img {
@@ -482,7 +494,7 @@ a:hover {
 .errorAlert {
   color: black;
   background-color: red;
-  width: 21rem;
+  width: 16rem;
   height: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -498,6 +510,7 @@ a:hover {
   font-size: 1rem;
   -webkit-box-shadow: 10px 7px 7px black;
           box-shadow: 10px 7px 7px black;
+  border-radius: 9px;
 }
 
 .lastInfo {
@@ -585,8 +598,8 @@ footer video {
     gap: 1rem;
     padding-bottom: 1rem;
   }
-  .video {
-    min-height: 13rem !important;
+  .video.video {
+    min-height: 13rem;
   }
   .overlayVideo {
     width: 100%;
@@ -610,7 +623,7 @@ footer video {
     top: 35%;
     font-size: 2rem;
   }
-  .textAndCarousel {
+  .textAndCarousel.textAndCarousel {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -619,13 +632,13 @@ footer video {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 22rem;
-    margin: 0.5rem !important;
+    margin: 0.5rem;
   }
-  .textAndCarousel .textSection {
-    width: 98% !important;
+  .textAndCarousel.textAndCarousel .textSection {
+    width: 98%;
   }
-  .carousel-inner {
-    width: 21rem !important;
+  .carousel-inner.carousel-inner {
+    width: 21rem;
   }
   .funFact1 {
     display: -webkit-box;
@@ -637,23 +650,26 @@ footer video {
             flex-direction: column;
     width: 21.5rem;
   }
-  .funFact1 .image1 {
-    width: 102.5% !important;
+  .funFact1 .image1.image1 {
+    width: 102.5%;
   }
-  .funFactInfo1 {
-    width: 100% !important;
+  .funFactInfo1.funFactInfo1 {
+    width: 100%;
   }
   #gallery {
     margin: 0.5rem;
   }
-  .galleryImages {
-    -ms-grid-columns: (1fr)[2] !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-    width: 98%;
+  .galleryImages.galleryImages {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    margin: auto;
+    padding-left: 0;
+    gap: 0.2rem;
   }
   .galleryPhotos {
-    width: 177px;
-    height: 177px;
+    width: 166px;
+    height: 166px;
   }
   .size {
     width: 50%;
@@ -662,19 +678,26 @@ footer video {
     width: 22rem;
     height: auto;
   }
-  .w-50 {
-    width: 99% !important;
+  .w-50.w-50 {
+    width: 99%;
   }
   .w-100 {
-    width: 21rem !important;
+    width: 100%;
     height: 14rem;
   }
-  .about {
-    width: 21rem !important;
+  .about.about {
+    width: 21rem;
   }
-  .oneCard {
+  .about.about p {
+    padding: 0.8rem;
+  }
+  .about.about img {
+    width: 10rem;
+    margin-bottom: 1.2rem;
+  }
+  .oneCard.oneCard {
     width: 15rem;
-    margin-left: 5rem !important;
+    margin-left: 5rem;
   }
   .priceAnimals {
     padding: 0;
@@ -764,6 +787,9 @@ footer video {
   }
   ul {
     padding-left: 0;
+  }
+  .errorAlert {
+    width: 11rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
