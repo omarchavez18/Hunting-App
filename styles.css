@@ -303,6 +303,8 @@ a:hover {
 }
 
 .galleryPhotos {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 230px;
   height: 230px;
   -webkit-box-shadow: 16px 11px 12px black;
@@ -431,6 +433,15 @@ a:hover {
   text-align: center;
 }
 
+#namess > li {
+  list-style: none;
+}
+
+img {
+  margin-bottom: 1.5rem;
+  width: 22rem;
+}
+
 .animalsByName {
   margin-top: 4rem;
   text-align: center;
@@ -487,8 +498,11 @@ a:hover {
 }
 
 .priceAnimals img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 11.9rem;
   height: 11rem;
+  margin: auto;
 }
 
 .errorAlert {
@@ -703,11 +717,15 @@ footer video {
     padding: 0;
     gap: 0.3rem;
     margin-top: 0.5rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  li {
-    font-size: 16px;
-    background-color: bisque;
-    font-weight: 700;
+  .priceAnimals li {
+    width: 10rem;
+  }
+  .priceAnimals img {
+    width: 9.89rem;
+    height: 8rem;
   }
   .lastInfo {
     display: inherit;
@@ -736,6 +754,9 @@ footer video {
   }
   .footer video {
     width: 5rem;
+  }
+  #namess li img {
+    width: 13rem;
   }
 }
 
