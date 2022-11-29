@@ -9,10 +9,7 @@ Description.
 ![Captura de pantalla 2022-06-07 202804](https://user-images.githubusercontent.com/84557440/172511756-5b11544b-2340-4b77-981b-07578470126a.png)
 ![Captura de pantalla 2022-06-07 202832](https://user-images.githubusercontent.com/84557440/172511790-abff3794-fc26-4295-94a1-20f16445735e.png)
 
- This page is made to help the hunters search for information
- about hunting season, tips for beginners, recipes, value data about
- turkey hunting, and an app to look with specific filters about
- different types of hunting.
+ This page is made to help hunters search for information about hunting season, tips for beginners, recipes, value data about turkey hunting, and an app to look at with specific filters about different types of hunting.
 
  Perhaps you´re interested in many stuff about these topics I share
  with you a couple of links where you can find info about gear, guns,
