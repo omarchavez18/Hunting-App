@@ -117,7 +117,7 @@ const showError = (id) => {
 // 1) endpoint - animals by name
 const fetchHunting = () => {
   const search = document.getElementById("search").value;
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/name/${search}`;
+  const url = `http://localhost:3000/animals/name/${search}`;
   fetch(url)
     .then((res) => res.json())
     .then((animals) => {
@@ -145,7 +145,7 @@ const searchBtnName = document
 
 const fetchHuntingKind = () => {
   const kind = document.getElementById("kind").value;
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/huntingkind/${kind}`;
+  const url = `http://localhost:3000/animals/huntingkind/${kind}`;
   fetch(url)
     .then((res) => res.json())
     .then((animals) => {
@@ -168,7 +168,7 @@ const searchBtnKind = document
 // 2) endpoint - animals by price
 const fetchHuntingPrice = () => {
   const price = document.getElementById("animalPrice").value;
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/price/${price}`;
+  const url = `http://localhost:3000/animals/price/${price}`;
   fetch(url)
     .then((res) => res.json())
     .then((animals) => {
@@ -190,7 +190,7 @@ const searchBtnPrice = document
 const fetchHuntingType = () => {
   const type = document.getElementById("type").value;
 
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/type/${type}`;
+  const url = `http://localhost:3000/animals/type/${type}`;
   fetch(url)
     .then((res) => res.json())
     .then((info) => {
@@ -214,7 +214,7 @@ const searchBtnType = document
 const fetchHuntingSeason = () => {
   const season = document.getElementById("season").value;
 
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/seasonMonth/${season}`;
+  const url = `http://localhost:3000/animals/seasonMonth/${season}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
@@ -248,7 +248,7 @@ const searchBtnSeason = document
 const fetchHuntingZone = () => {
   const zone = document.getElementById("zone").value;
 
-  const url = `https://hunting-app-for-hunters.herokuapp.com/animals/zone/${zone}`;
+  const url = `http://localhost:3000/animals/zone/${zone}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
