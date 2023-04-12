@@ -1,23 +1,43 @@
 # Hunting-App
+
+>Front end  and back end of Hunting App.
+
+## Live Demo
 To see the page click in the next link
 [HuntApp](https://omarchavez18.github.io/Hunting-App/)
 
-FrontEnd Documentation.
-Description.
 
+## Sneak peak
 ![Captura de pantalla 2022-06-07 202725](https://user-images.githubusercontent.com/84557440/172511742-89b138a1-cf51-4773-a200-da3fd84f6c69.png)
 ![Captura de pantalla 2022-06-07 202804](https://user-images.githubusercontent.com/84557440/172511756-5b11544b-2340-4b77-981b-07578470126a.png)
 ![Captura de pantalla 2022-06-07 202832](https://user-images.githubusercontent.com/84557440/172511790-abff3794-fc26-4295-94a1-20f16445735e.png)
 
- This page is made to help hunters search for information about hunting season, tips for beginners, recipes, value data about turkey hunting, and an app to look at with specific filters about different types of hunting.
 
- Perhaps you´re interested in many stuff about these topics I share
- with you a couple of links where you can find info about gear, guns,
- videos, and interesting things might you can find useful.
-        
+## Built With
 
-Hunting app about the season, zone, type, price, and animals stats, the app show you all the animals if you want a big or small game and many more things to come.
+- HTML
+- CSS
+- JAVASCRIPT
+- EXPRESS
+- JEST
+- GITHUB ACTIONS
+- NODEJS
+- CORS
+- POSTMAN
 
+
+### Description
+    This page is made to help hunters search for information about hunting season, tips for beginners, recipes, 
+    value data about turkey hunting, and an app to look at with specific filters about different types of hunting.
+
+    Perhaps you´re interested in many stuff about these topics I share
+    with you a couple of links where you can find info about gear, guns,
+    videos, and interesting things might you can find useful.
+    
+    Hunting app about the season, zone, type, price, and animals stats, the app show you all the animals if you want
+    a big or small game and many more things to come.
+   
+   
 BackEnd Documentation
 
 API Documentation
@@ -47,14 +67,7 @@ _Base URL_: `https://hunting-app-for-hunters.herokuapp.com/`
 | Client Error | :unauthorized         | 401              |
 | Server Error | :unprocessable_entity | 500              |
 
-## Built With
 
-- express
-- jest
-- github Actions
-- NodeJS
-- CORS
-- Postman
 
 ## Getting Started
 
