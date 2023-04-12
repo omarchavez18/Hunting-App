@@ -16,7 +16,7 @@ To see the page click in the next link
 ## Built With
 
 - HTML
-- CSS
+- SCSS
 - JAVASCRIPT
 - EXPRESS
 - JEST
